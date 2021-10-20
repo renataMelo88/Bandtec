@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 9</title>
+</head>
+
+<body style="background-color: rgb(119, 119, 233);">
+    <!--
+        9 (desafio). Crie um programa em HTML/JS o qual:
+
+a) No início tenha somente uma combo com os itens:
+
+    - Escolha uma espécie -
+
+    Ovíparos
+
+    Mamiferos
+
+b) Se o usuário escolher o primeiro item, nada acontece e se, eventualmente, tiver algo abaixo da combo, deve desaparecer tudo (ver itens a seguir para entender melhor)
+
+c) Se o usuário escolher "Ovíparos", abaixo da combo deve aparecer outra combo com os itens:
+
+   - Escolha um Ovíparo -
+
+   Galinha
+
+   Peixe
+
+   Tartaruga
+
+d) Se o usuário escolher "Mamíferos", abaixo da combo deve aparecer outra combo com os itens:
+
+   - Escolha um Mamífero -
+
+   Elefante
+
+   Porco
+
+   Coelho
+
+e) Após escolher um animal - seja em c), seja em d), uma foto de um exemplar deve aparecer abaixo da combo.
+ Se não for escolhido um animal válido (ou seja, se for escolhido o primeiro item da lista), a foto que estive,
+  eventualmente aparecendo some. Se nenhum estiver sendo mostrada, continua sem mostrar nada
+ 
+f) Também após escolher um animal - seja em c), seja em d), abaixo da imagem descrita em e), deve aparecer um 
+campo de texto solicitando o "Valor de compra do animal"
+
+g) Abaixo do campo em f) deve ter um botão "Calcula imposto". Ao clicar nele, aparecer abaixo uma frase como 
+esta:
+
+    O imposto será de R$X
+
+Onde X é:
+
+    - Caso ovíparo: %5 do valor de compra
+
+    - Caso mamífero: %10 do valor de compra
+    -->
+    <img src="" alt="">
+    <select onchange="especie()" id="cb_especie">
+        <option value="0">Escolha uma espécie</option>
+        <option value="1">Ovíveros</option>
+        <option value="2">Mamíferos</option>
+    </select>
+
+    <br><br>
+
+    <select onchange="mamiferos()" id="cb_mamiferos" style="display: none;">
+        <option value="11">Escolha um Mamífero</option>
+        <option value="3">Elefante</option>
+        <option value="4">Porco</option>
+        <option value="5">Coelho</option>
+    </select>
+
+    <br><br>
+
+    <select onchange="oviveros()" id="cb_oviparo" style="display: none;">
+        <option value="12">Escolha um Ovíparo</option>
+        <option value="6">Tartaruga</option>
+        <option value="7">Galinha</option>
+        <option value="8">Peixe</option>
+    </select>
+
+    <br>
+    <br>
+    <input type="text" id="in_preco" placeholder="digite o valor do animal">
+    <button onclick="calculo()">Calcular imposto</button>
+    <div id="resultado">
+
+    </div>
+
+    <br><br>
+    <img id="img" src="" alt="" style="width: 200px; display: block;">
+</body>
+
+</html>
+
+<script>
+    function especie() {
+        if (cb_especie.value == 2) {
+            cb_mamiferos.style.display = 'block';
+        } if (cb_especie.value == 1) {
+            cb_oviparo.style.display = 'block';
+            cb_mamiferos.style.display = 'none';
+
+        }
+        if (cb_especie.value == 0) {
+            cb_mamiferos.style.display = 'none';
+            cb_oviparo.style.display = 'none';
+
+        }
+    }
+
+    function mamiferos() {
+        if (cb_mamiferos.value == 3) {
+            img.src = './elefante.jpeg';
+        }
+        if (cb_mamiferos.value == 4) {
+            img.src = './porco.jpeg';
+        }
+        if (cb_mamiferos.value == 5) {
+            img.src = './coelho.jpeg';
+        }
+        if (cb_mamiferos.value == 11) {
+            img.src = '';
+        }
+    }
+
+    function oviveros() {
+        if (cb_oviparo.value == 6) {
+            img.src = './tartaruga.jpeg';
+        }
+        if (cb_oviparo.value == 7) {
+            img.src = './galinha.jpeg';
+        }
+        if (cb_oviparo.value == 8) {
+            img.src = './peixe.jpeg';
+        }
+        if (cb_oviparo.value == 12) {
+            img.src = '';
+        }
+    }
+
+    function calculo() {
+        var valorAnimal = Number(in_preco.value);
+        var oviparoImposto = valorAnimal * 0.05;
+        var mamiferoImposto = valorAnimal * 0.1;
+
+        if (cb_especie.value == 1) {
+            resultado.innerHTML = `o imposto será R$ ${oviparoImposto.toFixed(2)}`;
+        } else if (cb_especie.value == 2){
+            resultado.innerHTML = `o imposto será R$ ${mamiferoImposto.toFixed(2)}`;
+
+        }
+
+
+
+    }
+
+
+
+</script>

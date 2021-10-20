@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+
+<body style="background-color: rgb(238, 238, 247);">
+    <!--
+        12. Melhore o programa da questão anterior de tal forma que:
+
+a) Abaixo da frase do valor guardado tenha as seguintes frases:
+
+    Quantidade de depósitos feitos: 0
+
+    Quantidade de retiradas feitas: 0
+
+b) Sempre que for clicado no botão "Depositar", o valor de "depósitos feitos" aumenta em 1
+
+c) Sempre que for clicado no botão "Tirar toda a grana", o valor de "retiradas feitas" aumenta em 1
+    -->
+    <center>
+
+        <div style="background-color: yellow;" id="valor"><h3>Valor guardado no cofrinho: R$0.00</h3> </div> <br>
+        <div style="background-color: green;" id="deposito">Quantidade de depósitos feitos: 0</div> <br>
+        <div style="background-color: red;" id="retirada">Quantidade de retiradas feitas: 0 </div> <br>
+        Qual o valor a ser depositado?
+        <input type="text" placeholder="digite um valor" id="ipt_valor"> <br> <br>
+        <button style="background-color: green;" onclick="depositados()"> <b>Depositar</b> </button> <br> <br>
+        <button style="background-color: red;" onclick="tirar()"> <b>Tirar toda a grana</b> </button>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    
+    ax_vezes = 0;
+    retirado = 0;
+    depositado = 0;
+
+    function depositados() {
+        depositado += Number (ipt_valor.value);
+        valor.innerHTML = `Valor guardado no cofrinho: <b> R$ ${depositado.toFixed(2)} </b>`;
+        ax_vezes ++;
+        deposito.innerHTML = `Quantidade de depósitos feitos: <b> R$ ${ax_vezes}</b>`;
+        }
+
+    function tirar(){
+        depositado = 0;
+        valor.innerHTML = `Valor guardado no cofrinho: R$0.00`;
+        retirado ++;
+        retirada.innerHTML = `Quantidade de retiradas feitas: <b>${retirado}</b>`;
+    
+    }    
+</script>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer14</title>
+</head>
+
+<body>
+
+    <h4>Exer14</h4>
+
+    <!--14. Crie um programa em HTML/JS a qual: 
+
+a) Tenha os botões "Gente tímida" e "Gente que causa" 
+
+b) Abaixo dos botões já deve aparecer a foto de uma pessoa com cara de confiante 
+
+c) Ao clicar no primeiro botão, a foto some 
+
+d) Ao clicar no segundo botão, a foto aparece -->
+
+    <button onclick="timida()">Gente tímida</button><br>
+    <button onclick="causa()">Gente que causa</button><br>
+
+
+
+    <span id="ver"><img src="/home/aluno/Desktop/EXERCICIOS/confiante.jpg" alt=""> </span>
+
+</body>
+
+<script>
+    function timida() {
+        ver.innerHTML = '';
+    }
+
+    function causa() {
+        ver.innerHTML = '<img src="/home/aluno/Desktop/EXERCICIOS/confiante.jpg" alt=""> ';
+    }
+</script>
+
+</html>

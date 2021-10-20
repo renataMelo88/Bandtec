@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--
+       4. Crie um programa em HTML/JS o qual:
+
+a) Solicite 2 notas ao usuário
+
+b) Ao clicar num botão "Calcular média", calcule sua média e exiba, na página a frase:
+
+    Sua média foi de X
+   -->
+   
+
+   <h3>Calcular média</h3>
+   Insira nota 1 <br>
+   <input type="text" placeholder="nota 1" id="nota1"> <br>
+   Insira a nota  2 <br>
+   <input type="text" placeholder="nota 2" id="nota2">  <br>
+
+   <button onclick="calc()" >Calcular media</button>
+
+   <div id="ver" ></div>
+</body>
+
+<script>
+    function calc(){
+        
+       ver.innerHTML += `<br> Sua média é ${(Number(nota1.value) + Number(nota2.value)) /2 } <br>`;
+
+    }
+</script>
+</html>

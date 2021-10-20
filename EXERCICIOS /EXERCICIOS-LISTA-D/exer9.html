@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        9. Crie um programa em HTML/JS que:
+
+a) Tenha no topo uma foto qualquer. Verifique qual sua altura, em px (só verifique e deixe esse valor 
+anotado em algum lugar, como no seu caderno, por exemplo)
+
+b) Abaixo da foto, uma "combo" com as opções
+
+   Normal
+
+   Grande
+
+   Enorme
+
+   Pequeno
+
+   Minúsculo
+
+c) Ao clicar num botão "Redimensionar imagem", a foto deve mudar de altura, conforme estas regras:
+
+Normal: altura original (aquela que você anotou no início)
+
+Grande: altura original + 50px
+
+Enorme: altura original + 300px
+
+Pequeno: altura original - 50px
+
+Minúsculo: altura original - 100px 
+
+
+    -->
+
+
+    <div id="img">
+        <img id="img_mudar" src="estudos.jpeg" height="80px"  alt="">
+    </div> <br>
+
+    <select id="listaImg">
+        <option value="">Escolha uma tamanho</option>
+        <option value="200px">Grande</option>
+        <option value="300px">Enorme</option>
+        <option value="150px">Pequeno</option>
+        <option value="50px">Minúsculo</option>
+    </select>
+
+    <button onclick="mudarTamanho()" >Redimensionar imagem</button>
+</body>
+</html>
+
+<script>
+
+    function mudarTamanho(){
+        
+
+        img_mudar.style.height = listaImg.value;
+
+
+    }
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 7</title>
+</head>
+
+<body>
+    <!--
+        7. Crie um programa em HTML/JS o qual:
+
+a) Solicite o valor que o usuário tem economizado
+
+b) Ao clicar em "Poder de compra", exibir uma ou várias frases abaixo do dele, conforme estas regras:
+
+   b.1) Caso o valor economizado seja igual ou menor que 0: Exibir SOMENTE a frase Nada de compras triste
+
+   b.2) Caso o valor economizado for maior que 0 e até 100: Exibir Viajem de ida e volta pra Praia Grande
+
+   b.3) Caso o valor economizado seja maior que 100 e menor que 4000: Exibir abaixo da frase de 
+   b.2): Uma boa moto usada
+
+   b.4) Caso o valor economizado é a partir de 4000: Exibir abaixo da frase de b.3): Mais alguma bobagem legal
+
+ 
+    -->
+
+
+
+    <h2>Informe o valor que voce economizou</h2> <br>
+    <input type="text" placeholder="digite aqui" id="ipt_valor"> <br>
+    <button onclick="analisar()">Poder de compra</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+
+        var valor = ipt_valor.value;
+
+        if (valor <= 0) {
+            div_msg.innerHTML = `Nada de compras triste <span style='font-size:100px;'>&#128532;</span>`;
+
+        }
+
+        else if (valor > 100) {
+            div_msg.innerHTML += `Viajem de ida e volta pra Praia Grande <br>`;
+
+        } else if (valor < 400) {
+            div_msg.innerHTML = `Uma boa moto usada`;
+
+        } else if (valor >= 400) {
+            div_msg.innerHTML = `Mais alguma bobagem legal`;
+        }
+
+    }
+</script>

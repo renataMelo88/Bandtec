@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 16</title>
+</head>
+
+<body>
+    <h4>Exer 16 </h4>
+
+    <!--16. Crie um programa em HTML/JS a qual: 
+
+a) Tenha um título grande no inicio "O que faz um triatleta?" 
+
+b) Tenha os botões "Nada", "Corre" e "Pedala" 
+
+c) Ao clicar no 1º botão, aparece, abaixo dos botões, a foto de alguém nadando 
+
+d) Ao clicar no 2º botão, aparece, abaixo dos botões, a foto de alguém correndo 
+
+e) Ao clicar no 3º botão, aparece, abaixo dos botões, a foto de alguém pedalando -->
+
+    <h2>O que faz um triatleta?</h2> <br>
+
+    <button onclick="nada()">Nadar</button><br>
+    <button onclick="corre()">Correr</button><br>
+    <button onclick="pedala()">Pedalar</button><br>
+
+
+
+    <div id="ver"></div>
+</body>
+<script>
+    function nada() {
+        ver.innerHTML = '<img src="nadar.jpg" alt="nadar">';
+    }
+
+    function corre() {
+        ver.innerHTML = '<img src="correr.jpg" alt="correr"> ';
+    }
+
+    function pedala() {
+        ver.innerHTML = '<img src="pedalar.jpg" alt="pedalar">';
+    }
+
+
+</script>
+
+</html>

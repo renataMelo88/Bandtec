@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 15</title>
+</head>
+<body>
+    <h1>Análise de desempenho de atacantes</h1>  
+    <input id="input_partidas" placeholder="número de partidas"> <br>
+    <input id="input_gols" placeholder="número de gols"> <br> <br>
+    <button onclick="analise()">análise completa</button> <br><br>
+    <div id="div_mensagem"> </div>
+</body>
+</html>
+<script>
+    function analise(){
+        var num_partidas = Number(input_partidas.value);
+        var num_gols = Number(input_gols.value);
+        var media_gols = num_gols / num_partidas;
+
+        if (media_gols < 0.2) {
+            div_mensagem.innerHTML = "Melhor mudar de posição."
+        }
+        else if (media_gols <= 0.6){
+            div_mensagem.innerHTML = "Atacante mediano."
+        }
+        else {
+            div_mensagem.innerHTML = "Jogador caro."
+        }
+    }
+</script>

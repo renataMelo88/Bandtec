@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício11</title>
+</head>
+
+<body style="background-color: rgb(198, 130, 238);">
+    <center>
+        <!---
+    11. Crie um programa em HTML/JS que simule um cofrinho da seguinte forma:
+
+a) Tenha, logo de cara, a frase "Valor guardado no cofrinho: R$0.00"
+
+b) Solicite o valor a ser depositado
+
+c) Ao clicar num botão "Depositar", o valor informado em b) é adicionado ao valor
+ exibido na frase descrita em a)
+
+d) Ao clicar num botão "Tirar toda a grana", o valor exibido em a) volta a 0.00
+
+ -->
+        <div id="msg">
+            <h3>Valor guardado no cofrinho: R$0.00</h3> <br>
+        </div>
+
+        Informe valor a ser depositado: <br>
+        <input type="text" placeholder="digite um valor" id="ipt_valor"> <br> <br>
+        <button style="background-color: green;" onclick="deposito()"> <b>Depositar</b> </button> <br> <br>
+        <button style="background-color: red;" onclick="tirar()"> <b>Tirar toda a grana</b> </button>
+
+
+
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    var depositar = 0;
+
+    function deposito() {
+
+        depositar += Number(ipt_valor.value);
+        msg.innerHTML = ` Valor guardado no cofrinho: R$ ${depositar.toFixed(2)}`;
+
+    }
+
+    function tirar() {
+        var depositar = 0;
+        msg.innerHTML = ` Valor guardado no cofrinho: R$0.00`;
+    }
+
+</script>

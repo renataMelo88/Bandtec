@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body style="background-color: rgb(101, 159, 235);">
+
+    <center>
+        <select id="Lista_tabuada" onchange="tabuada()">
+            <option value="">Selecione uma tabuada</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </center>
+    <div id="verificar"></div>
+
+</body>
+
+</html>
+<script>
+    function tabuada() {
+        var tabuada = Lista_tabuada.value
+        verificar.innerHTML = `
+    ${tabuada}X1 = ${tabuada * 01} <br>
+    ${tabuada}X2 = ${tabuada * 02} <br>
+    ${tabuada}X3 = ${tabuada * 03} <br>
+    ${tabuada}X4 = ${tabuada * 04} <br>
+    ${tabuada}X5 = ${tabuada * 05} <br>
+    ${tabuada}X6 = ${tabuada * 06} <br>
+    ${tabuada}X7 = ${tabuada * 07} <br>
+    ${tabuada}X8 = ${tabuada * 08} <br>
+    ${tabuada}X9 = ${tabuada * 09} <br>
+    ${tabuada}X10 = ${tabuada * 10} <br>`;
+    }
+
+</script>

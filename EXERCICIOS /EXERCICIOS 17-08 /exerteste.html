@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora financeira</title>
+    </head>
+    <!-- Corpo -->
+    <body>
+    
+        <!--Input-->
+        <div class="container">
+            <div class="titulo">
+                <p>
+                <h2>Calculadora financeira</h2>
+
+                <h3>Veja como aumentar ainda mais sua margem de lucros!</h3>
+                </p>
+
+                <h4>Digite aqui seu faturamento mensal</h4>
+                <input id="faturamento" type="text" placeholder="digite aqui"> <br> <br>
+
+            </div>
+        </div>
+
+        <!-- Bottons -->
+        <div class="nav-btn">
+    
+            <h3>Tipo de Uva</h3>
+            <button onclick="italia()">Uva Italia</button>
+            <button onclick="thompson()">Uva Thompson</button>
+            <button onclick="crimson()"> Uva Crimson</button>
+            <button onclick="beni()"> Uva Benitaka</button>
+            <button onclick="rubi()"> Uva Rubi</button>
+
+            <div id="div_calc"></div>
+
+        </div>
+        <!-- Fim buttons -->
+
+        <!-- Botão saiba mais -->
+        <div class="nav-btn" href="#">
+            <a class="btn btn-nav" href="https://www.embrapa.br/uva-e-vinho" target="_blank">SAIBA MAIS</a>
+        </div>
+        <!-- Fim Botão saiba mais -->
+
+
+
+
+    </body>
+
+    </html>
+
+    <script>
+
+        function italia(){
+        var faturar = Number (faturamento.value);
+        var faturar1 = faturar * 4.50;
+        var result = faturar1 * 0.1 ;
+
+        
+
+        div_calc.innerHTML = `Seu faturamento será de R$ ${result.toFixed(2)} `;
+        }
+
+        function thompson() {
+            var uva_thonp = Number(calcular.value)
+            var result = uva_thonp * 0.1;
+            
+            div_calc.innerHTML = `O seu lucro passa a ser de:
+                <br>  ${result.toFixed(2)}  `;
+        }
+
+    </script>

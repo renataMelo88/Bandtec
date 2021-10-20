@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 4</title>
+</head>
+
+<body style="background-color: violet;">
+    <!--
+        4. Uma nutróloga e quer um programa que a ajude a avaliar o peso de crianças de 5 anos. 
+        Crie para ela um programa que, ao ler o peso de uma criança de 5 anos, exibe uma dessas frases
+
+●      Abaixo do peso (se peso até 13.5kg)
+
+●      Acima do peso (se peso maior que 21.2kg)
+
+●      Peso na média (se peso maior que 13.5kg até 21.2kg)
+
+●      Peso perfeito (se o peso for exatamente 18.3kg)
+    -->
+
+    <h3>Ensira seu peso</h3> <br>
+    <input type="text" placeholder="digite aqui" id="ipt_peso"> <br>
+    <button onclick="avaliar()">Avaliar</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+
+    function avaliar() {
+        var peso = ipt_peso.value;
+
+        if (peso < 13.5) {
+            div_msg.innerHTML = `Abaixo do peso`;
+
+        }
+        else if (peso < 21.2) {
+            div_msg.innerHTML = `Acima do peso`;
+
+        } else if (peso > 21.2) {
+            div_msg.innerHTML = `Peso na média`;
+
+        } else {
+            div_msg.innerHTML = `Peso perfeito`;
+        }
+
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer5</title>
+</head>
+
+<body style="background-color: rgb(212, 201, 212);">
+    <!--
+        5. Crie um programa em HTML/JS o qual:
+
+a) Solicite um número
+
+b) Solicite outro número
+
+c) Ao clicar em "Fazer potência", exibe, abaixo, um texto como este:
+
+    A elevado a B dá X
+
+Onde A é o número informado em a) e B é o número informado em b)
+
+
+    -->
+
+    <h4>Informe um numero</h4>
+    <input type="text" placeholder="digite o primeiro nr" id="ipt_primeiro">
+    <h4>Informe outro numero</h4>
+    <input type="text" placeholder="digite o segundo nr" id="ipt_segundo"> <br> <br>
+    <button style="background-color: violet;" onclick="potencia()">Fazer potência</button>
+
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+
+<script>
+    function potencia() {
+
+        resultado.innerHTML += `<br>O resultado da exponenciação é: <b> 
+            ${ipt_primeiro.value ** ipt_segundo.value} </b>`;
+
+    }
+</script>

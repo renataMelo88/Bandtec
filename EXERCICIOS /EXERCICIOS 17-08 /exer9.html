@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 9</title>
+</head>
+
+<body>
+    <!--
+        9. Crie um programa em HTML/JS o qual:
+
+a) Solicite a quantidade de filhos que uma pessoa tem
+
+b) Ao clicar no botão "Calcular Auxílio Filhos", calcular e exibir o "Auxílio Filhos" que essa pessoa 
+terá direito
+
+c) O cálculo que deve ser usado é este: R$25,00 por filho
+
+d) A frase que deve aparecer abaixo do botão para mostrar o valor do auxílio é como esta:
+
+    Você tem X filhos, logo, seu "Auxílio Filhos" será de R$Y
+
+
+    -->
+
+    <h4>Qual a quantidade de filhos</h4> <br>
+    <input id="qtdFilhos" type="text" placeholder="digite aqui"> <br>
+    <button onclick="calcular()">Calcular Auxílio Filhos</button>
+
+    <div id="ver"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var auxilio = Number(qtdFilhos.value);
+        var result = auxilio * 25;
+
+
+        ver.innerHTML += `Você tem ${auxilio} filhos, logo, seu "Auxílio Filhos" será de 
+        R$ ${result}`;
+
+    }
+</script>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer 14</title>
+</head>
+
+<body style="background-color: rgb(135, 133, 233);">
+    <!--14. Crie um programa em HTML/JS o qual:
+
+a) Solicite a quantidade de votos que o "Zé Buduia" (ou o nome que quiser) teve na eleição
+
+b) Solicite a quantidade de votos que a "Maria Bigodenha" (ou o nome que quiser) teve na eleição
+
+c) Solicite a quantidade de votos brancos que houveram na eleição
+
+d) Solicite a quantidade de votos nulos que houveram na eleição
+
+e) Ao clicar em "Resultado da Eleição", exibir textos  conforme o exemplo abaixo:
+
+    Total de votos: 200
+    Zé Ruela: 40% (80 votos)
+    Maria Bigodenha: 35% (70 votos)
+    Inválidos: 25% (50 votos)
+
+ -->
+ <center>
+
+    <b><h2>Sistema de votação</h2></b>  <br>
+    <h3>Votos Color</h3> 
+    <input id="cand1" placeholder="digite aqui" type="text"> <br>
+
+    <h3>Votos Bolsonaro</h3> 
+    <input id="cand2" placeholder="digite aqui" type="text"> <br>
+
+    <h3>Votos Brancos</h3> 
+    <input id="branco" placeholder="digite aqui" type="text"> <br>
+
+    <h3>Votos Nulos</h3> 
+    <input id="voto_nulo" placeholder="digite aqui" type="text"> <br>
+
+    <button style="background-color: red;" onclick="analisar()"> <b>Resultado da Eleição</b> </button>
+
+    <div id="ver"></div>
+
+</center>
+
+
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var candidato1 = Number(cand1.value);
+        var votosTotais = Number(cand1.value) + Number(cand2.value) +
+            Number(branco.value) + Number(voto_nulo.value);
+        var resultado = (cand1.value / votosTotais) * 100;
+        
+        ver.innerHTML = `<b>Total de votos: <u> ${votosTotais} </u> </b> <br> <b> Color: </b> ${resultado} 
+        % (${candidato1}votos) <br>`;
+    // questão a 
+
+     
+        var candidato2 = Number(cand2.value);
+        var votosTotais = Number(cand1.value) + Number(cand2.value) +
+            Number(branco.value) + Number(voto_nulo.value);
+        var resultado = (cand2.value / votosTotais) * 100;
+
+        ver.innerHTML += ` <b> Bolsonaro: </b> ${resultado} 
+        % (${candidato2}votos) <br>`;
+    // questão b
+
+
+        var result_voto_nulo = Number(voto_nulo.value);
+        var votosTotais = Number(cand1.value) + Number(cand2.value) +
+            Number(branco.value) + Number(voto_nulo.value);
+        var resultado = (voto_nulo.value / votosTotais) * 100;
+        
+        ver.innerHTML += ` <b> Nulo: </b> ${resultado} % 
+         (${result_voto_nulo}votos)<br>`;
+
+    // questão c     
+
+        var voto_branco = Number(branco.value);
+        var votosTotais = Number(cand1.value) + Number(cand2.value) +
+            Number(branco.value) + Number(voto_nulo.value);
+        var resultado = (branco.value / votosTotais) * 100;
+
+
+        ver.innerHTML += `<b> Branco: </b> ${resultado} %  
+        (${voto_branco}votos) `;
+
+    // questão d    
+    }
+</script>

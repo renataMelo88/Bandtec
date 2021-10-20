@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 2</title>
+</head>
+
+<body>
+    <!--
+     2. Crie um programa que exibe a classe social de uma pessoa que mora
+      em Tuvalu (um dos menores países do mundo) conforme a renda familiar
+       mensal.
+
+a) Solicite a renda familiar mensal
+
+b) Conforme digita, deve aparecer abaixo uma dessas frases: 
+
+   "Classe E" (até 250)
+
+   "Classe D" (+250 até 900)
+
+   "Classe C" (+900 até 2500)
+
+   "Classe B" (+2500 até 9500)
+
+   "Classe A" (+9500)
+ -->
+
+    <h2 style="background-color: aqua; width: 250px;">Renda familiar</h2> <br>
+
+    <h3>Renda familiar</h3>
+    <input type="text" id="ipt_renda"> <br>
+
+    <button onclick="verificar()">Verifcar</button> <br>
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+    function verificar() {
+        var renda = ipt_renda.value;
+
+        if (renda < 250) {
+            msg.innerHTML += `Classe E`;
+        } else if (renda < 900) {
+            msg.innerHTML += `Classe D `
+
+        } else if (renda < 2500) {
+            msg.innerHTML += `Classe C`;
+
+        } else if (renda < 9500) {
+            msg.innerHTML += `Classe B`;
+
+        } else if (renda > 9500) {
+            msg.innerHTML += `Classe A`
+
+        }
+    }
+</script>

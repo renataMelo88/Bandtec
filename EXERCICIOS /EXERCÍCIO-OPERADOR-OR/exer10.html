@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-10</title>
+</head>
+<body style="background-color: violet;">
+
+    <center>
+        <!--
+            10. Augusto Bivio é aluno Bandtec e bolou um critério para indicar em  quais empresa teria preferência em ir trabalhar. Seus critérios são: A bolsa deve ser pelo menos 1800 ou o VR pelo menos 20 ou deve ficar a no máximo 30 minutos de tempo de deslocamento da faculdade. Se um desses 3 critérios for ok, a empresa está entre suas preferências. Assim, crie um programa em HTML/JS o qual:
+
+a) Solicite o nome da empresa
+
+b) Solicite o valor da bolsa da empresa
+
+c) Solicite o valor do VR da empresa
+
+d) Solicite o tempo de descolamento da empresa para a Bandtec
+
+e) Ao clicar em "É preferida?", mostre uma dessas mensagens na própria página, abaixo do botão:
+
+   "A empresa X é uma de suas preferências", caso a empresa atenda a pelo menos um dos critérios aqui explicados
+   "A empresa X está fora da sua lista", caso contrário
+
+ 
+        -->
+
+        <h3>Qual o nome da empresa?</h3> <br>
+        <input type="text" id="ipt_nome"> <br>
+
+        
+        <h3>Qual o valor da bolsa da empresa?</h3> <br>
+        <input type="text" id="ipt_valor_bolsa"> <br>
+
+        
+        <h3>Qual o valor do VR da empresa?</h3> <br>
+        <input type="text" id="ipt_valor_vr"> <br>
+
+        <h3>Qual o tempo de deslocamento da empresa para a Bandtec?</h3> <br>
+        <input type="text" id="ipt_tempo_deslocamento"> <br>
+
+        <button onclick="avaliar()">É preferida?</button>  
+
+        <div id="msg"></div>
+        
+
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var bolsa = ipt_valor_bolsa.value;
+        var empresa = ipt_nome.value;
+        var vr = ipt_valor_vr.value;
+        var deslocamento = ipt_tempo_deslocamento.value;
+
+        if (bolsa >=1800 || vr >=20 || deslocamento <=30 ) {
+            msg.innerHTML = `A empresa ${empresa} é uma de suas preferências`;
+            
+        } else {
+            msg.innerHTML = `A empresa ${empresa} está fora da sua lista`;
+        }
+    }
+</script>

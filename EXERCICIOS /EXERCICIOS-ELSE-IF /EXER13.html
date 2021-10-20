@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 13</title>
+</head>
+
+<body style="background-color: rgb(200, 151, 247);">
+
+    <!--
+        12. Crie um botão para avaliar o quão habilidoso o usuário é nos cliques.
+
+a) A tela deve ter o texto "Você já clicou 0 vezes"
+
+b) Ao clicar em "Clica neu", o contador do texto em a) aumenta. De 0 vai pra 1, depois pra 2, depois pra 3 e assim por diante
+
+c) Além de atualizar o contador, exiba umas dessas frases abaixo da frase em a)
+
+   "Dedo fraquinho, hein", enquanto clicou menos de 5 vezes
+   "Dedo bom, mano enquanto clicou entre 5 e 10 vezes
+   "Gosta de clicar, hein!", enquanto clicou entre 11 e 15 vezes
+   "Eita dedo nervoso!", enquanto clicou mais de 15 vezes
+    -->
+
+    <center>
+
+       <h2>Valor guardado: <span id="span_valor">0</span></h2> 
+        <br><br><br>
+        <button onclick="bt_saldo()">Guardar R$5</button>
+        <br><br><br>
+        <button onclick="bt_debito()">Gastar R$10</button>
+
+        <br><br><br>
+        <div id="div_men"></div>
+    </center>
+
+</body>
+
+</html>
+<script>
+    var dinheiro = 0;
+
+
+    function bt_saldo() {
+        dinheiro = dinheiro + 5;
+        span_valor.innerHTML = dinheiro;
+
+        if (dinheiro >= 0 && dinheiro < 100) {
+            div_men.innerHTML = `<span style="color: blue;">Finanças OK! ✔</span>`;
+        }
+
+        if (dinheiro >= 100) {
+            div_men.innerHTML = "#OSTENTAÇÃO"
+        }
+
+        else if (dinheiro < (-20)) {
+            div_men.innerHTML = "Quase um Corithians!"
+        }
+
+        else {
+            div_men.innerHTML = "Finanças em perigo!! ⚠"
+        }
+
+    }
+    function bt_debito() {
+        dinheiro = dinheiro - 10;
+        span_valor.innerHTML = dinheiro;
+
+        if (dinheiro >= 0 && dinheiro < 100) {
+            div_men.innerHTML = `<span style="color: blue;">Finanças OK! ✔</span> `;
+        }
+
+        if (dinheiro >= 100) {
+            div_men.innerHTML = "#OSTENTAÇÃO";
+        }
+
+        else if (dinheiro < (-20)) {
+            div_men.innerHTML = "Quase um Corithians!";
+        }
+
+        else {
+            div_men.innerHTML = "Finanças em perigo!! ⚠";
+        }
+
+
+    }
+
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Game</title>
+    <link rel="stylesheet" href="desafio19.css">
+</head>
+<body>
+    <center>
+        <h1>Ichigo VS Ulquiorra</h1>
+    </center>
+
+<!--Div central das imagens-->
+<div class="div_imagens">
+    <div class="div_ichigo">
+        <div class="div_img1">
+            <img class="img1" id=img_ichigo 
+            src="https://criticalhits.com.br/wp-content/uploads/2021/04/ichigo-hollow-01-910x546.jpg" alt="">
+        </div> 
+        <div class="botao_ichigo"><button onclick="ulquiorra_apanha()">Bater no Ulquiorra</button></div> 
+    </div>
+
+    <div class="div_ulquiorra">
+        <div class="div_img2">
+            <img class="img2" id="img_ulquiorra" src="http://pm1.narvii.com/7645/a978db421a92ec04ab043f865e244f02aaedc849r1-400-250v2_uhq.jpg" alt="">
+        </div> 
+        <div class="botao_ulquiorra"><button onclick="ichigo_apanha()">Bater no Ichigo</button></div>
+    </div>
+</div> 
+<!--Div das barras de vida-->
+<div class="div_barras">
+    <div id="div_barra1">
+        <div style=" 
+        width: 300px;
+        height: 25px;
+        background-color: green;
+        float: left;" 
+        id="hp_ichigo"> </div>
+    </div>
+
+    <div id="div_barra2">
+        <div style = "
+        width: 300px;
+        height: 25px;
+        background-color: green;
+        float: right;" 
+        id="hp_ulquiorra"> </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script>
+    var vida_ichigo = 300;
+    var vida_ulquiorra = 300;
+
+    function ichigo_apanha(){
+        vida_ichigo = vida_ichigo - 25;
+        hp_ichigo.style.width = `${vida_ichigo}px`
+        if (vida_ichigo <= 0){
+            img_ichigo.src = "https://i.ytimg.com/vi/KQm6JmeplLQ/maxresdefault.jpg";
+            alert("Ulquiorra venceu !");
+        }
+    };
+    function ulquiorra_apanha(){
+        vida_ulquiorra = vida_ulquiorra - 25;
+        hp_ulquiorra.style.width = `${vida_ulquiorra}px`
+        if (vida_ulquiorra <= 0) {
+            img_ulquiorra.src = "https://static.wikia.nocookie.net/bleach/images/9/93/Ep272_Ichigo_Arremessa_Ulquiorra.png/revision/latest?cb=20210117201539&path-prefix=pt-br"
+            alert ("Ichigo venceu!");
+        }
+    };
+
+</script>

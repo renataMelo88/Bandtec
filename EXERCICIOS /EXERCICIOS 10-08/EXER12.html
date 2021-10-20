@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer12</title>
+</head>
+
+<body>
+
+    <h4>EXER 12</h4>
+
+<!--12. Refaça o programa da questão anterior de tal forma que: 
+
+a) A frase de gol do Brasil apareça na cor verde 
+
+b) A frase de gol da Alemanha apareça com cor de fundo vermelho escuro 
+e letra amarela -->
+
+<h2>Brasil x Alemanha</h2> <br>
+
+    <button onclick="golBrasil()" >Gol do Brasil</button> <br>
+    <button onclick="golAlemanha()" >Gol da Alemanha</button> <br>
+
+    <b>Tempo real do jogo:</b>
+
+    <span id="analisar" ></span>
+
+</body>
+
+<script>
+    function golBrasil() {
+        analisar.innerHTML += '<span style="color: green;">Gol do Brasil!</span> ';
+    }
+
+    function golAlemanha() {
+        analisar.innerHTML += '<span style="color: yellow;background-color: red;">Gol do Alemanha!</span> ';
+    }
+
+</script>
+
+</html>

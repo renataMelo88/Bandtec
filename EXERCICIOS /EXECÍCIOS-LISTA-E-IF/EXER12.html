@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer 12</title>
+</head>
+<body>
+    <!--
+        12. Crie um programa em HTML/JS o qual:
+
+a) Solicite o peso total num elevador
+
+b) Ao clicar num botão "Ligar elevador"...
+
+c) Caso o peso seja menor que 500, exiba um alert com a frase "Elevador vai se mover"
+
+d) Caso o peso seja a partir de 500, exiba um alert com "Alguém precisa descer do elevador"
+
+ 
+    -->
+<h4>Qual o peso total no elevador</h4>
+<input type="text"  id="ipt_peso"> <br>
+<button onclick="ligar()" >Ligar elevador</button>
+
+<div id="msg"></div>
+
+</body>
+</html>
+
+<script>
+    function ligar(){
+        var peso = ipt_peso.value;
+        if (peso <500) {
+            alert ("Elevador vai se mover");
+            
+        } if(peso >=500){
+            alert ("Alguém precisa descer do elevador");
+        }
+
+        
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer 2 </title>
+</head>
+
+<body style="background-color: rgb(138, 128, 230);">
+    <!--
+        2. Crie um programa em HTML/JS o qual:
+a) Solicite o raio de uma circunferência
+b) Ao clicar num botão "Calcular Área", calcule e exiba a área da 
+circunferência na tela, abaixo do botão (considere o PI como sendo 3,14)
+
+-->
+    <center>
+
+        <h4>Informe qual é o raio?</h4> <br>
+        <input type="text" placeholder="digite o raio" id="ipt_raio"> <br>
+        <button onclick="calcular()">Calcular Área</button>
+
+        <div id="verificar"></div>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+
+    function calcular() {
+        var raio = Number(ipt_raio.value);
+        var resultado = raio * 3.14;
+
+        verificar.innerHTML = `O raio é de: ${resultado}`;
+    }
+</script>

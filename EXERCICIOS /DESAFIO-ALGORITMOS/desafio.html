@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+
+    <div id="validation_input" style="display: block;">
+
+        <h2>Seja bem vindo ao banco KNAB</h2> <br>
+        <h3>Simulação de Emprestimos e Investimentos</h3> <br> <br>
+        <h4>Entre com os dados da sua conta:</h4> <br>
+
+        <input id="ipt_conta" placeholder="conta" type="text">
+
+        <input id="ipt_digito" placeholder="digito" type="text">
+
+        <input id="ipt_senha" placeholder="senha" type="password"> <br><br>
+
+        <button onclick="simular()">Simular</button>
+
+
+    </div>
+
+
+    <div id="validation_simulacao" style="display: none;">
+
+        <h3>O banco KNAB é a sua melhor opção</h3> <br>
+        <h4>impretimos e investimentos com as melhores taxas</h4>
+        <h5>Entre com os dados da sua simulação</h5> <br>
+
+        Valor da Operação:
+        <input id="ipt_operacao" placeholder="valor" type="text">
+
+        <select name="" id="listaOperacao">
+            <option value="">Selecione a operação</option>
+            <option value="4">Emprestimo</option>
+            <option value="5">Investimento </option>
+        </select>
+
+        <select name="" id="listaPrazo">
+            <option value="">Escolha o prazo</option>
+            <option value="1">Curto</option>
+            <option value="2">Médio</option>
+            <option value="3">Longo</option>
+        </select> <br> <br> <br>
+
+        <button onclick="avaliar()">Mostrar resultado</button>
+
+    </div>
+
+
+
+    <div id="voltar" style="display: none;">
+
+        <div id="msg"></div>
+
+        <button onclick="voltarSimulacao()">Voltar a simulação</button>
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function simular() {
+
+        var conta = Number(ipt_conta.value);
+        var digito = Number(ipt_digito.value);
+        var senha = ipt_senha.value;
+
+        if (conta != 0) {
+
+
+            if (digito == conta % 11) {
+
+
+
+                if (senha == "manaus" && digito >= 0 && digito <= 3) {
+                    alert("Seja bem vindo!");
+                    validation_input.style.display = 'none';
+                    validation_simulacao.style.display = 'block';
+
+                }
+
+            } else if (senha == "fortaleza" && digito > 7) {
+                alert('Bem vindo(a)');
+                validation_input.style.display = 'none';
+                validation_simulacao.style.display = 'block';
+            } else if (senha == "recife" && digito >= 4 && digito <= 7) {
+                alert('Bem vindo(a)');
+                validation_conta.style.display = 'none';
+                validation_operacao.style.display = 'block';
+            } else {
+                alert('DIGITO NEGADO!');
+            }
+        } else {
+            alert('CONTA NEGADO!');
+        }
+
+
+    }
+
+    var contador = 0;
+
+    function avaliar() {
+
+        var simulacao = Number(ipt_operacao.value);
+
+        var emprestimoCurto = simulacao * 0.24;
+        var EmprestimoMedio = simulacao * 0.16;
+        var EmprestimoLongo = simulacao * 0.1;
+
+        var investimentoCurto = simulacao * 0.5;
+        var investimentoMedio = simulacao * 0.8;
+        var investimentoLongo = simulacao * 0.12;
+
+
+        voltar.style.display = 'block';
+        validation_simulacao.style.display = 'none';
+
+
+
+        if (listaPrazo.value == 1 || listaPrazo.value == 2) {
+            alert("Esta operação está condicionada ao seu perfil");
+        }
+        if (listaOperacao.value == 4) {
+
+
+            contador++;
+
+
+            msg.innerHTML = `Simulação ${contador} <br> Para o empréstimo de R$ ${simulacao.toFixed(2)} no prazo será cobrado juros de R$ ${emprestimoCurto.toFixed(2)} ao ano`;
+
+        }
+
+        if (listaPrazo.value == 1 || listaPrazo.value == 2) {
+
+        }
+        if (listaOperacao.value == 5) {
+
+            msg.innerHTML = `Simulação ${contador} <br> Investindo R$ ${simulacao.toFixed(2)} no medio prazo o seu rendimento será de 
+          R$ ${investimentoMedio.toFixed(2)} ao ano`;
+            contador++;
+
+        }
+
+
+
+
+
+        if (listaPrazo.value == 1 || listaPrazo.value == 2) {
+
+        }
+        if (listaOperacao.value == 5) {
+
+            contador++;
+
+
+            msg.innerHTML = ` Simulação ${contador} <br> Para o empréstimo de R$ ${operacao.toFixed(2)} no prazo 
+        será cobrado os juros de R$ ${investimentoCurto.toFixed(2)} ao ano`;
+
+        }
+
+
+        if (listaOperacao.value == 5) {
+
+            msg.innerHTML = ` Simulação ${contador} <br> Investindo R$ ${contador.Tofixed(2)} no medio prazo o seu rendimento será de 
+    R$ ${investimentoMedio.Tofixed(2)} ao ano`;
+            contador++;
+
+        }
+    }
+
+
+
+
+
+    function voltarSimulacao() {
+
+        voltar.style.display = 'none';
+        validation_simulacao.style.display = 'block';
+
+
+    }
+
+</script>

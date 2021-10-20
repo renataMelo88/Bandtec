@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 12 </title>
+</head>
+
+<body style="background-color: rgb(192, 224, 208);" >
+    <center>
+
+    <h4 >Digite o Ki base </h4>
+    <input id="base" type="text" placeholder="Ki Base"> <br> <br>
+    <b>Transformar em...</b> <br> <br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button>
+
+
+
+    <div id="div_sayajin"></div>
+    <div id="div_img"></div>
+</center>
+</body>
+
+</html>
+
+<script>
+
+    function ssj() {
+        var kiBase = Number(base.value)
+        var result = Number(kiBase * 50);
+
+        div_img.innerHTML = '<img src="ssj.png" height="200px"> <Br>';
+        div_sayajin.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${result}`;
+    }
+
+    function ssj2() {
+        var kiBase = Number(base.value)
+        var result = Number(kiBase * 100);
+
+        div_img.innerHTML = '<img src="ssj2.png" height="200px">'
+        div_sayajin.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${result}`;
+    }
+
+    function ssj3() {
+        var kiBase = Number(base.value)
+        var result = Number(kiBase * 200);
+
+        div_img.innerHTML = '<img src="ssj3.png" height="200px">'
+        div_sayajins.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${result}`;
+    }
+
+</script>

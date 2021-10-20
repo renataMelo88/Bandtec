@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        3. Refaça a questão anterior de tal forma que a frase apareça com o nome da cidade
+         em negrito e o ano de nascimento sublinhado.
+    -->
+    Qual sua cidade natal?
+    <input placeholder="cidade natal" id="cidade" type="text"> <br>
+    Qual sua idade?
+    <input placeholder="ano de nasc" id="ano" type="text"> <br>
+
+    <button onclick="cadastrar()" >Cadasto</button> <br>
+    <button onclick="limpar()" >Limpar</button>
+
+    <div id="ver" ></div>
+</body>
+
+<script>
+    function cadastrar(){
+        ver.innerHTML = " <b> Sua cidade é </b>" + cidade.value + "<u> e sua idade é </u>" + cidade.value;
+    }
+
+    function limpar(){
+        ver.innerHTML =    ' ';
+    }
+</script>
+</html>
+</body>
+</html>
+</body>
+</html>

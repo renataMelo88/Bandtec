@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer22</title>
+</head>
+
+<body>
+    <!--(desafio). Refaça a questão anterior de tal forma que: 
+
+a) Inicialmente, as cores dos semáfaros estejam "fracas" 
+
+b) Ao clicar numa das luzes, somente ela fica "forte" e as demais continuam "fracas" 
+
+OBS: Use apenas as técnicas ensinadas em aula até agora.-->
+
+
+
+    <div style="background-color: black; height: 400px; width: 150px; padding: 20px;">
+        <img onclick="red()" src="red2.png" alt="" style="height: 100px; padding: 20px;"> <br> <br>
+        <img onclick="yellow()" src="yellow2.png" alt="" style="height: 90px; padding: 20px;"><br>
+        <img onclick="green()" src="green2.png" alt="" style="height: 90px; padding: 20px;">
+       
+        <span id="oculto" style="display: none;">
+        <img onclick="red2()" src="red.png" alt="" style="height: 90px; padding: 20px;"> <br> <br>
+        </span>
+
+    </div>
+
+
+
+    <span id="ver"></span> <br>
+
+
+</body>
+
+<script>
+    function red() {
+        ver.innerHTML = '<img onclick="red2()" src="red.png" alt="" style="height: 90px; padding: 20px;padding-top: 10px; "> <br> <br>';
+    }
+
+    function yellow() {
+        ver.innerHTML = '<span style="color: black; background-color: orange;">Só siga se estiver perto e rápido. </span>';
+    }
+
+    function green() {
+        ver.innerHTML = '<span style="color: white; background-color: green;">Siga :) </span>';
+    }
+
+  
+
+
+</script>
+
+</html>

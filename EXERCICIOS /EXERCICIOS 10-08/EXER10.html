@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXER 10</title>
+</head>
+
+<body>
+    <center>
+        <h4>EXER 10</h4>
+
+        <!--10. Refaça o programa da questão anterior de tal forma que cada mensagem tenha cores de fundo 
+        e letra diferentes: 
+
+a) Mensagem do 1º botão: com cor de fundo vermelha e letra branca 
+
+b) Mensagem do 2º botão: com cor de fundo preta e letra amarela 
+
+c) Mensagem do 3º botão: com cor de fundo branca e letra verde 
+
+OBS: Não pode aparecer mais de uma mensagem ao mesmo tempo. Sempre só uma mensagem por vez. -->
+
+
+
+        <button onclick="pare()" style="background-color: red; color: white;">Pare</button><br>
+        <button onclick="pense()" style="background-color: black; color: yellow;">Pense</button><br>
+        <button onclick="siga()" style="background-color: white; color: green;">Siga</button>
+
+    </center>
+
+    <span id="ver"></span>
+
+</body>
+
+<script>
+    function pare() {
+        ver.innerHTML = "Pare e aguarde!";
+    }
+
+    function pense() {
+        ver.innerHTML = "Pense se pode seguir ou se deve parar!";
+    }
+
+    function siga() {
+        ver.innerHTML = "Pode seguir adiante sorriso";
+    }
+
+
+</script>
+
+</body>
+
+</html>

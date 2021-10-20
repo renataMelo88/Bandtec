@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        10. Faça um programa em HTML/JS o qual:
+
+ a) Pergunte ao usuário o valor de seu saldo na conta do banco
+
+ b) Ao clicar num botão "Verificar finanças"...
+
+            b.1) Caso o saldo em conta for igual a zero (==0), exiba esta frase na cor preta na tela: "Conta zerada".
+
+b.2) Caso o saldo seja negativo (<0), exiba esta frase na cor vermelha na tela: "Está devendo!".
+
+            b.3) Caso o saldo seja positivo (>0), exiba esta frase na cor azul: "Saldo positivo! sorriso"
+    -->
+
+    <h3>Qual o saldo da sua conta?</h3>
+    <input type="text" id="ipt_saldo"> <br>  
+    <button onclick="verificar()" >Verificar finanças</button> 
+
+    <div id="msg"></div> 
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var saldo = ipt_saldo.value;
+         if(saldo ==0){
+             msg.innerHTML += `<div style="color: black;">Conta zerada</div>`;
+         }
+         if(saldo >0){
+             msg.innerHTML += `<div style="color: blue;" >Saldo positivo! sorriso</div>`;       
+         }
+         
+    }
+</script>

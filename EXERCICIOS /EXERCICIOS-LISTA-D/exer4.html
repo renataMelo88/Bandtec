@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body style="background-color: rgb(255, 174, 0);">
+    <!--
+        4. Existe uma oração muito famosa atribuída a São Francisco de Assis, chamada "Oração pela paz". 
+        É aquela que diz "onde houver ódio que eu leve amor, onde houver desespero que eu leve esperança...". 
+        Ou seja, tem um sentimento ruim e o bom em seguida. Crie um programa em HTML/JS o qual:
+
+a) Tenha uma "combo" que mostre pelo menos 3 partes "ruins" que constam na oração
+
+b) Ao escolher uma opção, exiba um alerta com a parte "boa" correspondente, conforme a oração
+
+
+    -->
+
+    <center>
+<h3><u>Oração pela paz</u></h3> <br>
+
+<select  id="oracao" onchange="ver()">
+    <option value="">VERIFICAR</option>
+    <option value="onde houver ódio que eu leve amor,">Parte ruim</option>
+    <option value="onde houver ódio que eu leve amor,">Parte ruim II</option>
+    <option value="onde houver ódio que eu leve amor,">Parte ruim  III</option>
+</select>
+
+
+</center>
+</body>
+</html>
+
+<script>
+    function ver(){
+    
+        
+    alert(` onde houver desespero que eu leve esperança... ${oracao.value}`);
+}
+    
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 5</title>
+</head>
+<body>
+    <!--
+        5. Crie um programa em HTML/JS o qual:
+
+a) Solicite 2 notas de um aluno
+
+b) Ao clicar em "Verificar situação", calcule sua média e...
+
+c) Caso a média seja a partir de 6, exiba um alert com "Parabéns, aprovado!"
+
+d) Caso a média seja menor que 6, exiba um alert com "Tente outra vez..."
+
+
+    -->
+
+    <h3>Informe sua primeira nota</h3>
+    <input type="text" id="ipt_nota"> <br>
+    <h3>Informe sua segunda nota</h3>
+    <input type="text" id="ipt_nota2"> <br>
+
+    <button onclick="verificar()" >Verificar situação</button> 
+
+    <div id="msg"></div>
+
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var nota1 = ipt_nota.value;
+        var nota2 = ipt_nota2.value;
+        var resultado = (nota1 + nota2) / 2;
+
+        if(resultado >6){
+            msg.innerHTML += `Parabéns, aprovado!`;
+
+        }
+        else {
+            msg.innerHTML += `Tente outra vez...`;
+            
+        }
+    }
+</script>

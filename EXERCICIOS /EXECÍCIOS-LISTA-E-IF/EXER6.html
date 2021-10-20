@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 6</title>
+</head>
+<body>
+    <!--
+        6. Criar um programa em HTML/JS que auxilie um banco a identificar quem tem renda o suficiente para fazer o 
+        financiamento da casa própria.
+
+a) Solicite o valor da renda familiar
+b) Solicite o valor da prestação
+c) Ao clicar em "Verificar financiamento", exiba na página a mensagem "a prestação corresponde a xx.x% da 
+renda familiar" (divida a prestação pela renda e multiplique por 100)
+d) Se o valor calculado acima for maior que 30%, exibir também a mensagem abaixo em negrito e em vermelho.
+
+"Será necessário complementar a renda familiar"
+
+ 
+    -->
+
+    <h3>Qual a sua renda</h3>
+    <input id="ipt_renda" type="text"> <br>
+    
+    <h3>Qual valor da prestação</h3>
+    <input id="ipt_prestacao" type="text"> <br>
+
+    <button onclick="verificar()" >Verificar financiamento</button>
+    <div id="div_msg"></div>
+</body>  
+</html>
+
+<script>
+    function verificar(){
+        var resultado = (ipt_prestacao.value) /  (ipt_renda.value) * 100; 
+
+        if(resultado  > 30){
+            div_msg.innerHTML += ` <div style="color: red;" ><b> Será necessário complementar a renda familiar
+            ${resultado.toFixed(2)}%  </b></div>`;
+            
+            
+        } div_msg.innerHTML += `a prestação corresponde a ${resultado.toFixed(2)}% da 
+renda familiar`;
+    }
+</script>

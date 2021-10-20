@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 8</title>
+</head>
+<body>
+    <!--
+        8. Crie um programa em HTML/JS o qual:
+
+a) Solicite a quantidade de homens e mulheres num elevador
+
+b) Ao clicar num botão "Ligar elevador", calcule o peso total no elevador, considerando que um homem pesa em média
+ 90kg e uma mulher 70kg
+
+c) Caso o peso seja menor que 500, exiba uma frase na cor verde abaixo do botão com a frase Elevador vai se mover
+, pois está com Xkg
+
+d) Caso o peso seja a partir de 500, exiba uma frase na cor vermelha abaixo do botão com a frase Alguém precisa 
+descer. Precisa perder
+ Xkg para mover o elevador
+    -->
+
+    <h3>Qual a quantidade de homens?</h3>
+    <input type="text"  id="iptHomens"> <br>
+
+
+    <h3>Qual a quantidade de mulheres?</h3>
+    <input type="text"  id="iptMulheres"> <br>
+
+    <button onclick="verificar()" >Ligar elevador</button>
+
+    <div id="div_msg"></div>
+ 
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var homens = iptHomens.value * 90;
+        var mulheres = iptMulheres.value * 70;
+        var resultado = homens + mulheres;
+
+        if(resultado <500){
+            div_msg.innerHTML += `<div style="color: green;" >Elevador vai se mover, pois está com ${resultado}kg</div> `;
+        }  
+        else{
+
+        div_msg.innerHTML += `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${resultado}kg`;
+
+
+        }
+    }
+</script>
+    
+</script>
+

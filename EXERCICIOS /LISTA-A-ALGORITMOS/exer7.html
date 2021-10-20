@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<center>
+<body style="background-color: turquoise; position: center;">
+    <!--
+        7. Crie um programa em HTML/JS que calcule a progressão geométrica, 
+        fazendo o seguinte:
+
+a) Solicite o 1º número da progressão
+
+b) Solicite a razão
+
+c) Solicite qual o número (termo) da progressão deseja ver
+
+d) Ao clicar em "Calcular PG", calcule o termo conforme indicado em 
+c) e exiba, abaixo a frase
+
+    O Xº termo nessa PG será Y
+
+Onde X é o número indicado em c) e Y é o valor que o programa calculou
+
+#ficadica: Calculadora de PG online e fórmula.
+
+
+    -->
+
+    <h4>Informe o 1º número da progressão</h4>
+    <input type="text" placeholder="digite aqui" id="progressao">
+
+    <h4>Informe a razão</h4> 
+    <input type="text" placeholder="digite aqui" id="razao">
+
+    <h4>Qual o número (termo) da progressão deseja ver</h4>
+    <input type="text" placeholder="digite aqui" id="termo"> <br><br>
+
+    <button style="background-color: rgb(29, 124, 114); color: aliceblue;" onclick="calcular()">Calcular PG</button>
+</center>
+    <div id="div_resultado"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular(){
+        var progresso = Number (progressao.value);
+        var razzao = Number (razao.value);
+        var nr_termo = Number (termo.value);
+        var resultado = progresso ** (1/razzao);
+        var resultado2 = resultado ** (1/resultado2)
+        var resultado3 = Number(resultado2.value + resultado.value);
+
+        div_resultado.innerHTML = ` O ${resultado3} termo nessa PG será ${resultado.toFixed(2)}
+
+Onde X é o número indicado em ${resultado2}`
+
+}
+
+
+
+</script>

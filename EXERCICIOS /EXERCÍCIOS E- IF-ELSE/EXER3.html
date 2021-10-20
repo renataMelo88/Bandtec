@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXER 3</title>
+</head>
+<body>
+    <!--
+        3. O Mercado BOM DOCE está em promoção, qualquer chocolate custa R$ 3,00 cada e se a compra 
+        for acima de uma dúzia de chocolates o preço cai para R$ 2,50 cada um. Criar um programa em HTML/JS 
+        que auxilie o Mercado a calcular o valor da compra de chocolate
+
+a) Solicite a quantidade de chocolates comprados;
+b) Após clicar num botão "Compra", exiba a mensagem "o valor da sua compra foi de xxxxxx,xx".  
+
+
+    -->
+
+<h3>Quantos chocolates</h3>
+<input type="text"  id="iptQtdaChocolates"> <br>
+
+<button onclick="compra()" >Compra</button>
+
+<div id="divMsg"></div>
+</body>
+</html>
+
+<script>
+    function compra(){
+        var qtdChocolates= iptQtdaChocolates.value;
+        var resultado = qtdChocolates * 3.50; 
+        var resultado2 = qtdChocolates * 2.50;
+        
+            if(resultado >= 6){
+                divMsg.innerHTML += ` O valor da sua compra foi de ${resultado2.toFixed(2)}`; 
+            }
+            else{
+                divMsg.innerHTML += ` O valor da sua compra foi de ${resultado.toFixed(2)}`; 
+
+            }
+    }
+</script>

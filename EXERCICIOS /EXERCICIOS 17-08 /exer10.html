@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer 10</title>
+</head>
+<body>
+    <!--
+        10. Refaça o programa da questão anterior de tal forma que:
+
+a) Ao invés de apenas perguntar a quantidade de filhos, pergunte a quantidade de filhos 
+com menos de 10 anos e de filhos a partir de 10 anos
+
+b) O cálculo do auxílio passa a ser este: R$30,00 p/ filho com menos de 10 anos e R$20,00 p/ 
+filho a partir de 10 anos
+
+c) A frase final deve ser como esta:
+
+    Você tem X filhos menores de 10 anos e Y filhos a partir de 10 anos, logo, seu
+     "Auxílio Filhos" será de R$Z
+
+
+    -->
+
+    <h4>Qual a quantidade de filhos com menos de 10 ano?</h4> <br>
+    <input id="idade10" type="text" placeholder="digite aqui"> <br>
+    <h4>Qual a quantidade de filhos a partir de 10 anos?</h4> <br>
+    <input id="idadeApartir" type="text" placeholder="digite aqui"> <br>
+
+    <button onclick="calcular()">Calcular Auxílio Filhos</button>
+
+    <div id="ver"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var auxilio = Number(idade10.value);
+        var auxilio2 = Number(idadeApartir.value);
+        var result = auxilio * 20;
+        var result2 = auxilio2 * 30;
+        var result3 = result + result2;
+
+
+        ver.innerHTML += `Você tem ${auxilio} filhos menores de 10 anos e ${auxilio2} filhos a
+         partir de 10 anos, logo, seu
+     "Auxílio Filhos" será de R$ ${result3}`;
+
+    }
+</script>

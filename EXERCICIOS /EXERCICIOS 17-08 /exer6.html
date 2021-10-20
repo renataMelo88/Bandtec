@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 6</title>
+</head>
+
+<body>
+    <!--
+        6. Todo mundo gosta de pizza! É um prato super democrático, pois existem sabores veganos, vegetarianos, sem glúten, com "low carb" (pouco carboidrato), doces etc. Crie um programa em HTML/JS o qual:
+
+a) Solicite o sabor e o preço da pizza
+
+b) Solicite a quantidade de amigos que vão comer
+
+c) Ao clicar num botão "Ver valor por amigo", calcule e exiba na tela uma frase como esta:
+
+    Cada amigo vai colaborar com R$X para a pizza de Y  
+
+Note que X aparece sublinhado.
+
+
+    -->
+
+   
+        <div style="background-color: rgb(193, 184, 209);">
+            <p>Preço da pizza</p>
+            <input id="preco" placeholder="digite o preço e sabor" type="text"><br>
+            <p>Sabor da pizza</p>
+            <input id="sabor" placeholder="digite o preço e sabor" type="text"><br>
+            <p>Quantidade amigos</p>
+            <input id="qtdAmigos" placeholder="digite a qtd amigos" type="text"><br> <br>
+
+            <button onclick="valor()">Ver valor por amigo</button>
+
+        </div>
+   
+    <div id="ver"></div>
+
+
+
+</body>
+
+<script>
+    function valor() {
+        var preço = Number(preco.value);
+        var amigos = Number(qtdAmigos.value);
+        var sabores = sabor.value;
+        var result = preço / amigos;
+
+        ver.innerHTML += `Cada amigo vai colaborar com  R$<u> ${result} </u> para pizza de ${sabores}`;
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 13</title>
+</head>
+<body style="background-color: rgb(174, 176, 197);" >
+    <!--13. Crie um programa em HTML/JS que ajude a calcular o tempo de 
+        cada fase do sono do ser humano.
+    
+    a) Solicite ao usuário quantas horas de sono ele dormiu
+
+b) Ao clicar no botão "Calcular Sono", faça os cálculos necessários para 
+exibir o seguinte conteúdo na tela:
+
+    Ao dormir X horas, você dormiu:
+    A horas na fase 1
+    B horas na fase 2
+    C horas na fase 3
+    D horas na fase REM
+
+-->
+
+<center>
+    <h4>Quantas horas vc dormiu?</h4> <br>
+    <input  type="text" id="qtdHoras" placeholder="digite aqui">
+    <button onclick="horas()" >Calcular sono</button>
+
+    <div id="verificar"></div>
+</center>
+</body>
+</html>
+
+<script>
+    function horas(){
+        var sono = qtdHoras.value; 
+        var sono1 = Number(sono/0.24);
+        var sono2 = Number (sono1 * 1.2);
+
+        
+        
+
+        verificar.innerHTML = `Ao dormir ${sono1} horas, você dormiu:
+    A horas na fase 1`;
+    }
+</script>

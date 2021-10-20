@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício11</title>
+</head>
+<body style="background-color: violet;">
+
+<center>
+
+    <!--
+        11. Crie um programa em HTML/JS o qual:
+
+a) Solicite a quantidade de filhos que o usuário tem
+
+b) Tenha um botão "Analisar família". Ao clicar nele...
+
+c) Caso tenha 1 ou mais filhos, exiba na tela, abaixo do botão, a frase
+
+            Não tem TV
+
+d) Caso tenha 2 ou mais filhos, exiba na tela, abaixo da frase em c), a frase
+
+            Não tem internet
+
+e) Caso tenha 3 ou mais filhos, exiba na tela, abaixo da frase em d), a frase
+
+            Não tem video game
+
+f) Caso tenha 4 ou mais filhos, exiba na tela, abaixo da frase em e), a frase
+
+            Não tem Netflix
+
+OBS: Ou seja, caso o usuário informe que tenha, por exemplo 4 ou mais filhos, devem aparecer as seguintes frases:
+
+   Não tem TV
+
+   Não tem internet
+
+   Não tem video game
+
+   Não tem Netflix
+
+Se tiver até 3 filhos, só não aparece a última frase, do Netflix
+    -->
+    <h1>Exercício Filhos</h1> <br>
+    <h2>Insira a quantidade de filhos que você tem: </h2>
+    
+    <input id="ipt_qtd_filhos" > <br>
+
+    <button onclick="analisar()">Análisar Familia</button> 
+   
+
+    <div id="msg"></div>
+</center>
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+        if (ipt_qtd_filhos.value >= 1 ){
+            msg.innerHTML += `Sem tv <br>`;
+        }
+        if (ipt_qtd_filhos.value >= 2 ) {
+            msg.innerHTML += `Não tem internet <br>`;
+        }
+        if (ipt_qtd_filhos.value >= 3 ) {
+            msg.innerHTML += `Não tem vídeo-game <br>`;
+        }
+        if (ipt_qtd_filhos.value >= 4 ) {
+            msg.innerHTML += `Não tem Netflix <br> <br>`;
+        }
+    }
+
+
+
+</script>

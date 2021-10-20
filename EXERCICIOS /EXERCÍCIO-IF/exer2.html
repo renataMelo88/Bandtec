@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer2</title>
+</head>
+
+<body style="background-color: #9b9bc9;">
+
+    <center>
+        <h2>Qual sua renda?</h2> <br>
+        <input type="text" id="ipt_renda"> <br>
+
+        <h2>Qual a renda total?</h2> <br>
+        <input type="text" id="ipt_renda_total"> <br>
+
+        <button onclick="verificar()">Verifica ajuda</button>
+
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    function verificar() {
+
+        if (ipt_renda.value >= 1050 && ipt_renda_total.value >= 2100) {
+            alert("Você terá direito");
+
+        } else {
+            alert("Você NÃO terá direito");
+
+
+        }
+
+    }
+
+
+</script>

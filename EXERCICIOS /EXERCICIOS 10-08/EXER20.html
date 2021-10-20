@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer20</title>
+</head>
+<body>
+    <h4>Exer 20</h4>
+
+    <!--20. Refaça a questão anterior de tal forma que: 
+
+a) logo de início, apareça, acima dos botões a foto de um guerreiro Sayajin 
+na forma normal (100px de altura): 
+b) Ao clicar nos botões de transformação, mudar a imagem de cima conforme orientado a seguir: 
+
+-->
+
+<img src="saiadim.png" alt="" height="100px" > <br>
+<button onclick="ssj()" >Transformar em SSJ"</button> <br>
+<button onclick="ssj2()" >Transformar em SSJ2</button> <br>
+<button onclick="ssj3()" >Transformar em SSJ3</button> <br>
+<button onclick="voltar()" >Voltar para a forma Base"</button>
+
+<div id="ver"></div>
+
+</body>
+
+<script>
+    function ssj(){
+        ver.innerHTML= '<img src="SSJ.PNG" alt=""> ';
+    }
+
+    function ssj2(){
+        ver.innerHTML= '<img src="SSJ2.PNG" alt=""> ';
+    }
+
+    function ssj3(){
+        ver.innerHTML= '<img src="SSJ3.PNG" alt=""> ';
+    }
+     
+    function voltar(){
+        ver.innerHTML= '<img src="saiadim.png" alt=""> ';
+    }
+    
+</script>
+</html>

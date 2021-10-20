@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-4</title>
+</head>
+
+<body style="background-color: rgb(240, 161, 240);">
+
+    <center>
+        <!--
+    4. Crie um programa em HTML/JS que verifique se o usuário é vegano ou não.
+
+a) Numa combo pergunte o que ele come no café da manhã, tendo as opções
+    ovos
+    leite de arroz
+    bacon
+
+b) Numa outra combo pergunte o que ele come no almoço, tendo as opções
+    bife
+    hamburger de soja
+    frango grelhado
+
+c) Numa outra combo pergunte o que ele come na janta, tendo as opções
+
+    picanha de soja
+    cupim
+    coração
+
+d) Ao clicar no botão "Sou vegano", aparece um alert com uma dessas frases:
+    "Sim, você é vegano!", caso ele consuma leite de arroz no café, hamburger
+     de soja no almoço e picanha de soja na janta
+
+    "Não, você não é vegano", caso contrário
+-->
+
+        <select id="listaManha">
+            <option value="1">Escolha uma opção</option>
+            <option value="2">ovos</option>
+            <option value="3">leite de arroz</option>
+            <option value="4">bacon</option>
+        </select> <br>
+
+        <select id="listaAlmoco">
+            <option value="5">Escolha uma opção</option>
+            <option value="6">bife</option>
+            <option value="7">hamburger de soja</option>
+            <option value="8">frango grelhado</option>
+        </select> <br>
+
+
+        <select  id="listaJantar">
+            <option value="">Escolha uma opção</option>
+            <option value="10">picanha de soja</option>
+            <option value="11">cupim</option>
+            <option value="12"> coração</option>
+        </select> <br>
+
+
+<button onclick="verificar()" >Sou vegano</button>
+
+
+    </center>
+
+</body>
+
+</html>
+
+
+<script>
+    function verificar() {
+
+        if (listaManha.value ==3 && listaAlmoco.value ==7 && listaJantar.value ==10) {
+            alert("Sim, você é vegano!");
+
+        } else {
+            alert("Não, você não é vegano");
+
+
+        }
+
+    }
+
+
+</script>

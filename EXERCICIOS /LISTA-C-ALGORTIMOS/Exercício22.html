@@ -1,0 +1,64 @@
+<body style="background-color: violet;">
+    <center>
+        <span id="id_sumir" style="display: block;">
+            <input id="ipt_leste" placeholder="Entregas para ZL"><br>
+            <input id="ipt_sul" placeholder="Entregas para ZS"><br>
+            <input id="ipt_norte" placeholder="Entregas para ZN"><br>
+            <input id="ipt_oeste" placeholder="Entregas para ZO"><br><br>
+            <button onclick="carregar()">Carregar agenda</button><br>
+        </span><BR></BR>
+        <div id="id_aparecer" style="display: none;">
+            <div id="zl">Entregas ZL: <span id="final_1"></span></div><br>
+            <div id="zs">Entregas ZS: <span id="final_2"></span> </div><br>
+            <div id="zn">Entregas ZN: <span id="final_3"></span> </div><br>
+            <div id="zo">Entregas ZO: <span id="final_4"></span> </div><br>
+            <div id="restante">Entregas restantes: <span id="rest"></span></div><br>
+
+            <button onclick="entregar_zl()">Entregar ZL</button><br>
+            <button onclick="entregar_zs()">Entregar ZS</button><br>
+            <button onclick="entregar_zn()">Entregar ZN</button><br>
+            <button onclick="entregar_zo()">Entregar ZO</button><br>
+        </div>
+    </center>
+
+</body>
+
+<script>
+
+    function carregar() {
+        id_sumir.style.display = 'none';
+        var regiaoLeste = Number(ipt_leste.value);
+        var regiaoSul = Number(ipt_sul.value);
+        var regiaoNorte = Number(ipt_norte.value);
+        var regiaoOeste = Number(ipt_oeste.value);
+
+        var resto = regiaoLeste + regiaoSul + regiaoNorte + regiaoOeste;
+        id_aparecer.style.display = 'block'
+        final_1.innerHTML = `${regiaoLeste}`;
+        final_2.innerHTML = `${regiaoSul}`;
+        final_3.innerHTML = `${regiaoNorte}`;
+        final_4.innerHTML = `${regiaoOeste}`;
+        restante.innerHTML = `${resto}`;
+    }
+
+    function zl() {
+        final_1.innerHTML -= 1
+        restante.innerHTML -= 1
+
+    }
+    function zs() {
+        final_2.innerHTML -= 1
+        restante.innerHTML -= 1
+
+    }
+    function zn() {
+        final_3.innerHTML -= 1
+        restante.innerHTML -= 1
+
+    }
+    function zo() {
+        final_4.innerHTML -= 1
+        restante.innerHTML -= 1
+
+    }
+</script>

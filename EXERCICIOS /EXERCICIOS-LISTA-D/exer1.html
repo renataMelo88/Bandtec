@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 1</title>
+</head>
+<body style="background-color: aqua;">
+    <!--
+        1. Crie um programa em HTML/JS o qual:
+
+a) Tenha uma "combo" com nomes de 4 produtos de mercearia (ex: leite, farinha etc)
+
+b) Ao clicar num botão "ver preço" deve aparecer um alert com a frase "Isso custa R$X,XX" 
+(você decide o valor de cada produto com 2 casas decimais).
+
+
+    -->
+
+    <center>
+    <h2>Mercearia Dom José</h2>
+    <select id="listaItens">
+        <option value="">Escolha um produto</option>
+        <option value="2.90">Leite</option>
+        <option value="3.50">Farinha</option>
+        <option value="32,90">Arroz</option>
+        <option value="9.90">Bolo</option>
+    </select> <br>
+    <button onclick="verificar()" style="background-color: aquamarine; color: blue;" >Ver preço</button>
+</center>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        //var Escolha = listaItens.value;
+        
+        alert(`Isso custa: R$ ${listaItens.value}`);
+
+
+
+    }
+</script>

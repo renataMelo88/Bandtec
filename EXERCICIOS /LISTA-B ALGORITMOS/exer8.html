@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 8 </title>
+</head>
+<body>
+    <!--
+        8. Crie um programa em HTML/JS o qual:
+
+a) Solicite o salário de um trabalhador
+
+b) Ao clicar no botão "Calcular Descontos", calcular...
+
+c) O desconto de INSS, que é de 10% do salário informado no item a). Para calular 10% de um número, 
+a forma mais simples é multiplicar ele por 0.1
+
+d) O desconto de IR (Imposto de Renda), que é de 20% do salário informado no item a). 
+Para calular 20% de um número, a forma mais simples é multiplicar ele por 0.2
+
+e) Exibir abaixo do botão um texto com este:
+
+    Seus descontos serão de:
+    INSS: R$A
+    IR: R$B
+    Total de descontos: R$C
+    Seu salário, após os descontos será de: R$D
+
+    Onde A é o valor calculado em c). B é o valor calculado em d). C é a soma de A+B. O valor de D é o 
+    salário informado em a) menos C.
+
+
+    -->
+
+       <h2>Digite o salário do trabalhador</h2> <br>
+       <input type="text" id="salario" placeholder="digite seu salario"><br> <br>
+       <button onclick="desconto1()">Calcular Descontos</button> 
+    
+
+ 
+
+    <div id="ver"></div>
+</body>
+</html>
+
+<script>
+    function desconto1(){
+
+        var salario1 = Number(salario.value);
+        var inss = salario1 * 0.1;
+        var ir = salario1 * 0.2;
+        var descontos = inss + ir;
+        var result = salario1 -  descontos;
+        
+        ver.innerHTML += `Seus descontos serão de INSS: R$ ${inss.toFixed(2)} 
+        IR: R$ ${ir.toFixed(2)} Total de descontos: R$ ${descontos.toFixed(2)} 
+        Seu salário, após os descontos será de: R$  ${result.toFixed(2)}`;
+
+    }
+    
+</script>

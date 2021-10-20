@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 5</title>
+</head>
+<body>
+    <!--
+      5. Crie um programa em HTML/JS o qual:
+
+a) Solicite o valor da passagem de ônibus
+
+b) Solicite a quantidade de viagens que o usuário faz por mês
+
+c) Ao clicar em "Calcular VT" calcule e exiba na tela quanto o usuário gastará por mês com passagens como uma frase como esta
+
+   Você vai gastar R$X por mês com ônibus
+
+Note que o valor é precedido de R$ e está sublinhado  
+    -->
+    Valor da passagem de ônibus <br>
+    <input type="text" id="valorOnibus"><br>
+    Quantidade de viagens que o usuário faz <br>
+    <input type="text" id="qtdViagens" > <br>
+    
+    <button onclick="calcular()" >Calcular VT</button>
+
+    <div id="ver" ></div>
+
+
+
+</body>
+
+<script>
+    function calcular(){
+        var passagens = Number (valorOnibus.value);
+        var viagens = Number (qtdViagens.value);
+        var result = passagens * viagens; 
+
+        ver.innerHTML = `Você vai gastar:R$  ${result}`;
+    }
+</script>
+</html>

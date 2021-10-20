@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer13</title>
+</head>
+<body>
+    <h2>Exer 13</h2> 
+
+    <!--13. Refaça o programa da questão anterior de tal forma que: 
+
+a) Exista um terceiro botão, ao lado dos anteriores, o "Recomeçar partida" 
+
+b) Ao clicar no novo botão, todos os textos de "gol..." somem da página (os demais itens,
+ que já estão na página desde o início, não somem) -->
+
+ <h2>Brasil x Alemanha</h2> <br>
+
+ <button onclick="golBrasil()" >Gol do Brasil</button> <br>
+ <button onclick="golAlemanha()" >Gol da Alemanha</button> 
+ <button onclick="refazer()" >Recomeçar partida</button>
+
+ <b>Tempo real do jogo:</b>
+
+ <span id="analisar" ></span>
+
+
+</body>
+
+<script>
+    function golBrasil() {
+        analisar.innerHTML += '<span style="color: green;">Gol do Brasil!</span> ';
+    }
+
+    function golAlemanha() {
+        analisar.innerHTML += '<span style="color: yellow;background-color: red;">Gol do Alemanha!</span> ';
+    }
+
+    function refazer() {
+        analisar.innerHTML = '';
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer21</title>
+</head>
+
+<body>
+    <!--21. Crie um programa em HTML/JS que ajude a ensinar crianças sobre os semáforos. 
+
+a) Tente "desenhar" um semáforo simples (preto com a luzes vermelha, amarela e verde, uma abaixo da outra) usando div e img (imagens de círculos com as 3 cores) 
+
+b) Ao clicar em cada uma das imagens que representa as cores do semáforo, deve aparecer, abaixo do semáforo, uma dessas frases: 
+
+  * Letra branca e fundo vermelho: Pare! Aguarde o verde! 
+
+  * Letra preta e fundo laranja: Só siga se estiver perto e rápido. 
+
+  * Letra branca e fundo verde: Siga sorriso -->
+    
+        <div style="background-color: black; height: 400px; width: 150px; padding: 20px;">
+            <img onclick="red()" src="red.png" alt="" style="height: 90px; padding: 20px;"> <br> <br>
+            <img onclick="yellow()" src="yellow.png" alt="" style="height: 90px; padding: 20px; padding-top: 20px;"><br>
+            <img onclick="green()" src="green.png" alt="" style="height: 90px; padding: 20px;">
+
+        </div>
+  
+
+
+    <span id="ver"></span> <br>
+
+</body>
+<script>
+    function red() {
+        ver.innerHTML = '<span style="color: white; background-color: red;">Pare! Aguarde o verde!</span>';
+    }
+
+    function yellow() {
+        ver.innerHTML = '<span style="color: black; background-color: orange;">Só siga se estiver perto e rápido. </span>';
+    }
+
+    function green() {
+        ver.innerHTML = '<span style="color: white; background-color: green;">Siga :) </span>';
+    }
+
+    
+
+
+</script>
+
+</html>

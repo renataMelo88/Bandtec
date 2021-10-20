@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer 1</title>
+</head>
+
+<body style="background-color: rgb(224, 224, 211);">
+    <!--
+        1. Crie um programa em HTML/JS o qual:
+a) Solicite o peso e a altura do usuário
+b) Ao clicar num botão "Calcula IMC", calcule e exiba seu IMC na tela (não num alert), abaixo do botão
+(pesquise a fórmula simples de IMC na internet)
+
+    -->
+    <center>
+        Qual seu peso? <br>
+        <input type="text" id="peso"> <br>
+        Qual sua altura <br>
+        <input type="text" id="altura"> <br>
+        <button onclick="calcular()">Calcula IMC</button>
+
+        <div id="ver"></div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var ipt_peso = Number(peso.value);
+        var ipt_altura = Number(altura.value);
+        var resultado = (ipt_peso / ipt_altura) * 2;
+
+        ver.innerHTML += `Seu IMC é ${resultado.toFixed(2)}`;
+
+
+    }
+</script>

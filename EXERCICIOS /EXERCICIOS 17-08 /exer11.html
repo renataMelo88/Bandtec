@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 11</title>
+</head>
+
+<body style="background-color: rgb(183, 179, 235);" >
+    <!--
+        11. Crie um programa em HTML/JS que demonstre como o poder de guerreiros Sayajins da franquia de desenhos
+        animados Dragon Ball aumenta na medida em que se transformam:
+
+a) Solicite o "ki base" (força base) do guerreiro Sayajin
+
+b) Abaixo, deve haver o texto "Transformar em..."
+
+c) Abaixo, devem haver os botões "SSJ", "SSJ2", "SSJ3", lado a lado entre si
+
+d) Ao clicar num dos botões, é calculado o novo ki do Sayajin conforme a regra de cada transformação...
+
+    SSJ: ki base x 50
+    SSJ2: ki base x 100
+    SSJ3: ki base x 200
+
+e) O valor do novo ki deve aparecer abaixo com uma frase como esta:
+
+    Após se transformar em X, o ki desse Sayajin passa a ser de Y
+
+    Onde X é o nome da transformação (SSJ, SSJ2 ou SSJ3) e Y é o valor calculado em d)
+    -->
+<center>
+    <h4 >Informe o ki das bases </h4> <br>
+    <input type="text" id="base" placeholder="digite aqui"> <br>
+    <h3>Transformar em...</h3><br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button>
+
+
+   
+    <div id="div_resultado"></div>
+    <div id="div_resultado2"></div>
+    <div id="div_resultado3"></div>
+</center>
+</body>
+
+</html>
+
+<script>
+
+
+    function ssj() {
+       
+        var ax_base = Number(base.value);
+        var result = Number (ax_base * 50);
+
+        div_resultado.innerHTML = `o ki desse Sayajin passa a ser de:
+             <br>  ${result}  `;
+    }
+
+
+     function ssj2() {
+         
+        var ax_base = Number(base.value);
+        var result = Number (ax_base * 100);
+
+        div_resultado.innerHTML = `o ki desse Sayajin passa a ser de:
+             <br>  ${result}  `;
+    }
+
+    function ssj3(){
+         
+        var ax_base = Number(base.value);
+        var result = Number (ax_base * 200);
+
+        div_resultado.innerHTML = `o ki desse Sayajin passa a ser de:
+             <br>  ${result}  `;
+    }
+   
+</script>

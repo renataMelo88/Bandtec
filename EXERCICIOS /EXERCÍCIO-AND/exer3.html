@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer 3 </title>
+</head>
+<body style="background-color: violet;">
+
+    <center>
+        <!--
+            3. Crie um programa em HTML/JS o qual:
+
+a) Pergunte uma nota de um aluno
+
+b) Ao clicar em "Avaliar aluno"...
+
+c) Caso a nota for entre 0 e 10, exibir um alert com a frase "Nota válida!"
+
+d) Caso a nota não estiver no intervalo definido em c), exibir um alert com a frase 
+"Onde já se viu nota menor que 0 e maior que 10?!"
+
+
+        -->
+
+        <h3>Qual sua nota?</h3> <br>
+        <input type="text"  id="ipt_nota"> <br>
+        <button onclick="avaliar()" >Avaliar aluno</button>
+
+        <div id="msg"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        if(ipt_nota.value >= 0 && ipt_nota.value >=10){
+            alert("Nota válida!");
+
+        } else{
+            alert("Onde já se viu nota menor que 0 e maior que 10?!");
+        }
+    }
+</script>

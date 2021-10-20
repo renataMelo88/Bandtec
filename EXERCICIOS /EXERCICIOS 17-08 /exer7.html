@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        7 . Crie um programa em HTML/JS o qual calcula e mostra de forma gráfica a frequência de um aluno num curso da seguinte forma:
+
+a) Solicite o nome do aluno
+
+b) Solicite a quantidade de aulas totais do curso
+
+c) Solicite a quantidade de aulas que o aluno faltou
+
+d) Ao clicar em "Calcular Frequência", calcule e exiba a frequência em forma de porcentagem conforme o exemplo a seguir:
+
+   Olá, NOME! Sua frequência foi de 90%
+
+   O texto deve estar na cor azul, menos a porcentagem, que deve estar na cor verde e negrito. No exemplo, o total de aulas foi 10 e o aluno faltou 1 aula (use esse exemplo para descobrir que cálculo fazer).
+
+e) Abaixo da frase em d) deve aparecer uma barra de cor vermelho escuro e uns 20px de altura. Sua largura ocupa uma determinada porcentagem da página, conforme a porcentagem de sua frequência (ex: se o aluno tiver 50% de frequência, a barra deve ter 50% da página de largura).
+
+#ficadica: para alterar a largura de um elemento via JS, basta pegar seu id e depois .style.width
+
+
+    -->
+
+    nome do aluno <br>
+    <input type="text" id="aluno" placeholder="nome do aluno"> <br>
+    quantidade de aulas totais do curso <br>
+    <input type="text" id="qtd_aulas" placeholder="qtda de aulas"> <br>
+    quantidade de aulas que o aluno faltou <br>
+    <input type="text" id="faltas" placeholder="qtda de faltas " > <br>
+
+    <button onclick="calcular()" >Calcular frequencia</button>
+
+    <div id="ver" ></div>
+    <div id="verificar" style="background-color: red; height: 20px; width: 0;"></div>
+
+</body>
+<script>
+    function calcular(){
+        var aulas = qtd_aulas.value;
+        var falta  = faltas.value;
+        var freq1 = Number (aulas - falta);
+        var freq2 = Number (freq1 ) * 100; 
+        var freq3 =  Number (freq2 /aulas); 
+        var nome = (aluno.value);
+
+        
+      
+
+        ver.innerHTML += ("OLA <b>" + nome +  "</b>! Sua frequência foi de : <b>" + freq3 + "</b>%" + "<b>");
+    }
+</script>
+
+
+</html>

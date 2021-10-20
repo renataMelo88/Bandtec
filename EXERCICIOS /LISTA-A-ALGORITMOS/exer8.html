@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício8</title>
+</head>
+<body style="background-color: rgb(101, 101, 219);" >
+
+<!--
+    8. Crie um programa em HTML/JS que simule uma determinada situação na compra de um carro financiado.
+
+No Brasil, devido ao "status" que carro dá e à falta de educação financeira do brasileiro médio, é comum 2 erros 
+financeiros gritantes na compra de carros: Comprar um carro 0km e comprar via financiamento muitas vezes, como em
+ 24x ou 36x por exemplo.
+
+Assim, seu programa vai mostrar ao usuário, de maneira gráfica, o quão é ruim comprar um carro 0km e financiado.
+
+a) Solicite o valor do carro a vista
+
+b) Solicite a taxa de juros a.m. (ao mês)
+
+c) Solicite a quantidade de parcelas
+
+d) Ao clicar em "Calcular prejú", exiba uma frase como esta:
+
+
+    Seu carro vai sair por um total de R$A. Após 1 mês, ele já vai valer só R$B. 
+    Porque comprou financiado, vai pagar o correspondente a C carros.
+-->    
+<center>
+
+<u><h1>Exercício 8</h1></u>
+Valor do carro: <br>
+<input id="ipt_vista" placeholder="À vista"><br>
+Taxa de juros cobrada: <br> 
+<input id="ipt_juros" placeholder="Por mês"><br>
+Quantidade de parcelas: <br>
+<input id="ipt_parcelas" placeholder="Qtd parcelas"><br> <br>
+
+<button style="background-color: rgb(100, 100, 146);" onclick="Calcular()">Calcular Prejú</button><br>
+<div id="resultado"></div>
+
+</center>
+</body>
+</html>
+<script>
+
+var valor= 0;
+var juros= 0;
+var parcelas= 0;
+
+function Calcular() {
+valor = Number (ipt_vista.value);
+juros = Number (ipt_juros.value);
+parcelas = Number (ipt_parcelas.value);
+var primeiro_termo = (valor/parcelas);
+var razao = (juros/100) + 1;
+
+// an = a1⋅qn−1
+// var TotalPago = [(Valor/Parcelas) * (((Juros/100)+1) ** (Parcelas - 1))];
+// Sn = a1 (q** n) - 1) /q - 1
+
+var prazo = primeiro_termo * ((razao ** parcelas) - 1);
+prazo /= (razao - 1);
+var vista = valor * 0.8;
+var comparacao = prazo / vista;
+
+resultado.innerHTML = `Seu carro vai sair por um total de <b>R$${prazo.toFixed(2)}</b> .Após 1 mês, ele já vai valer apenas <B>R$${vista.toFixed(2)}</b>
+.Porque comprou financiado, vai pagar o correspondente a <b>${comparacao.toFixed(1)}</b> carros.`;}
+</script>

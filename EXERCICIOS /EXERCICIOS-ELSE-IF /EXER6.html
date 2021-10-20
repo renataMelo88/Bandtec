@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        6. Crie um programa o qual:
+a) Pergunte numa combo, qual time grande São Paulo o usuário torce. Use uma combo.
+b) Ao clicar em "Fale sobre esse time", exiba abaixo:
+   "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians
+   "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras
+   "Agora que dá a bola é o Santos" com fundo branco e letra preta, se for Santos
+   "Salve o Tricolor paulista" com fundo preto e letra vermelha, se for São Paulo
+
+ 
+    -->
+
+
+
+
+
+    <select onchange="time()" id="listaTime">
+        <option value="">Qual time grande São Paulo o usuário torce?</option>
+        <option value="1">Salve o Corinthians</option>
+        <option value="2">Salve o alviverde imponente</option>
+        <option value="3">Agora que dá a bola é o Santos</option>
+        <option value="4">Salve o Tricolor paulista</option>
+    </select>
+
+    <div id="msg" style="width: 300px;"></div>
+</body>
+
+</html>
+
+<script>
+    function time() {
+
+        if (listaTime.value == 1) {
+            msg.innerHTML = '<div style="background-color: black; color: white;">Salve o Corinthians</div>';
+        }
+
+        else if (listaTime.value == 2) {
+            msg.innerHTML = '<div style="background-color: green; color: white;">Salve o alviverde imponente</div>';
+        }
+
+        else if (listaTime.value == 3) {
+            msg.innerHTML = '<div style="background-color: white; color: black;" >Agora que dá a bola é o Santos</div>';
+        }
+
+        else if (listaTime.value == 4) {
+            msg.innerHTML = `<div style="background-color: black; color: red" >Salve o Tricolor paulista</div>`;
+        }
+
+    }
+</script>

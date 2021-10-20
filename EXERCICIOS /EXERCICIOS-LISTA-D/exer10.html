@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        10. Crie um programa em HTML/JS que ajude o usuário a conhecer cada um dos descontos que um empregado de 
+        carteira assinada tem.
+
+a) A tela deve ter um campo "Digite seu salário"
+
+b) A tela deve ter um "combo" com as opções:
+
+   INSS
+
+   IR
+
+   VT
+
+c) Ao clicar num botão "Ver Desconto", deve aparecer na tela uma frase como esta:
+
+   Valor desse desconto: R$X,XX
+
+#ficaadica1 - Exiba os centavos sempre com 2 casa decimais.
+
+#ficaadica2 - Para calcular os descontos, considere que INSS é 10% do salário, 
+IR é 20% do salário e VT é 5% do salário. Por exemplo, se digitarmos 1000 no salário e escolhermos 
+a opção VT, ao clicar no botão deve aparecer que o desconto é de 50.
+    -->
+
+    <h4>Digite seu salário</h4>
+    <input type="text" placeholder="digite aqui" id="ipt_salario" > <br>
+
+    <select name="" id="listaDesconto">
+        <option value="0.1">INSS</option>
+        <option value="0.2">IR</option>
+        <option value="0.5">VT</option>
+    </select> <br>
+
+    <button onclick="ver()" >Ver Desconto</button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+
+    function ver(){
+        var salarioUsuario = Number(ipt_salario.value);
+        var Percentualdesconto = listaDesconto.value;
+        var resultado = salarioUsuario * Percentualdesconto;
+
+
+        verificar.innerHTML += ` O desconto é de ${resultado.toFixed(2)} <br>`;
+    }
+    </script>

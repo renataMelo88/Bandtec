@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-15</title>
+</head>
+
+<body style="background-color: #7171da;">
+    <center>
+        <!--
+            15. Crie um programa em HTML/JS o qual:
+
+a) Tenho o seguinte texto:
+
+    Números pares: 0
+    Números ímpares: 0
+
+b) Um botão "Sortear número". Ao clicar nele, sortear um número entre -30 e -9, 
+exiba abaixo do botão o número sorteado. Aumente um dos contadores do item a) conforme ele seja par ou ímpar
+
+
+        -->
+
+
+        <h3>Numeros pares: <b id="pares">0</b></h3> <br>
+        <h3>Numeros ímpares <b id="impares">0</b></h3> <br>
+
+        <button onclick="sortear()">Sortear número</button> <br>
+
+        <h3 id="numero_sorteado">Numero Sorteado:</h3>
+
+        <div id="divMsg"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    var sorteado = 0;
+    var par = 0;
+    var impar = 0;
+
+    function sortear() {
+        sorteado = (Math.random() * 21 -30).toFixed(0);
+
+
+    if(sorteado % 2 == 0){
+
+    par++;
+
+    } else {
+
+    impar++;
+
+    }
+
+    numero_sorteado.innerHTML = `${sorteado}`;
+    pares.innerHTML = `${par}`;
+    impares.innerHTML = `${impar}`;
+
+
+
+
+    }
+</script>

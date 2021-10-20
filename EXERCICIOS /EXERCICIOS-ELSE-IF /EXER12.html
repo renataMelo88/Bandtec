@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer-12</title>
+</head>
+
+<body style="background-color: chocolate;">
+    <!--
+        12. Crie um botão para avaliar o quão habilidoso o usuário é nos cliques.
+
+a) A tela deve ter o texto "Você já clicou 0 vezes"
+
+b) Ao clicar em "Clica neu", o contador do texto em a) aumenta. De 0 vai pra 1, depois pra 2, depois pra 3 e assim por diante
+
+c) Além de atualizar o contador, exiba umas dessas frases abaixo da frase em a)
+
+   "Dedo fraquinho, hein", enquanto clicou menos de 5 vezes
+   "Dedo bom, mano enquanto clicou entre 5 e 10 vezes
+   "Gosta de clicar, hein!", enquanto clicou entre 11 e 15 vezes
+   "Eita dedo nervoso!", enquanto clicou mais de 15 vezes
+    -->
+    <center>
+        <h2>Você já clicou <u id="numero">0</u> vezes</h2> <br>
+
+        <button onclick="analisar()">Clica neu</button> <br>    
+
+        <div id="msg"></div>    
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    var ax_resultado = 0;
+
+    function analisar() {
+
+        ax_resultado++;
+
+        numero.innerHTML = `${ax_resultado} <br>`;
+
+        if (ax_resultado < 5) {
+            msg.innerHTML = "Dedo fraquinho, hein <br>";
+
+        } else if (ax_resultado <= 10) {
+            msg.innerHTML = "Dedo bom!";
+
+        } else if (ax_resultado <= 15) {
+            msg.innerHTML = "Gosta de clicar, hein <br>"
+        }
+
+        else {
+            msg.innerHTML = "Eita dedo nervoso!"
+        }
+    }
+</script>

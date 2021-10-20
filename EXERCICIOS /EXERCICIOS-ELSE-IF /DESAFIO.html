@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body style="background-color: rgb(152, 178, 235);">
+    <center>
+        <h3>Desafio</h3>
+        <select  id="lista_clima" onchange="clima()">
+            <option value="">Escolha uma estação</option>
+            <option value="verao">Verão </option>
+            <option value="outono">Outono</option>
+            <option value="inverno">Inverno</option>
+            <option value="primavera">Primavera</option>
+
+        </select> <br>
+        <div id="img_clima" style="display: none;" >
+            <img id="verao"  style="width: 200px; float: left;" src="verao.jpeg" alt="">
+            <img id="outono" style="width: 200px; float: left;" src="outono.jpeg" alt="">
+            <img id="inverno" style="width: 200px; float: left;" src="inverno.jpeg" alt="">
+            <img id="primavera" style="width: 200px; float: left;" src="primavera.jpeg" alt="">
+        </div>
+        
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function clima() {
+        var clima = lista_clima.value;
+
+    if (clima == "verao" ) {
+            img_clima.style.display = "block";
+            verao.style.display = "none";
+            primavera.style.display= "block";
+            outono.style.display= "block";
+            inverno.style.display= "block";
+        }
+        if (clima == "outono") {
+            img_clima.style.display = "block";
+            verao.style.display = "none";
+            primavera.style.display= "block";
+            outono.style.display= "block";
+            inverno.style.display= "block";
+        }
+        if (clima == "inverno") {
+            img_clima.style.display = "block";
+            inverno.style.display = "none";
+            primavera.style.display= "block";
+            outono.style.display= "block";
+            verao.style.display= "block";
+        }
+        if (clima == "primavera") {
+            img_clima.dsplay.style = "none";
+        }
+    }
+
+</script>

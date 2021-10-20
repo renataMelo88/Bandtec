@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer7</title>
+</head>
+
+<body>
+    <!--a) Tenha um botão "Boas-vindas no alerta". 
+        Ao clicar nele, aparece um alert na página com alguma mensagem de boas vindas 
+
+    b) Tenha um botão "Boas-vindas na página". Ao clicar nele, aparece na própria página, abaixo dos botões alguma mensagem de boas vindas 
+    -->
+
+    <h4>EXER 7</h4>
+
+    <button onclick="ver()" style="color: red;">Boas-vindas!</button> <br>
+    <button onclick="verificar()">Boas-vindas!</button>
+
+    <span id="analise"></span>
+
+</body>
+
+<script>
+    function ver() {
+        alert("Boas-vindas!");
+    }
+
+    function verificar() {
+        analise.innerHTML = "Boas vindas!";
+
+    }
+</script>
+
+</html>

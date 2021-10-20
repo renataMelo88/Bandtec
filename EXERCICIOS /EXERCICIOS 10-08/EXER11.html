@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer11</title>
+</head>
+
+<body>
+
+
+    <h4>EXER 11</h4>
+
+    <!--11. Crie um programa em HTML/JS que simule a notificação de gols numa partida de futebol assim... 
+
+a) Tenha um título grande com  a frase "Brasil x Alemanha" 
+
+b) Abaixo desse título, os botões "Gol do Brasil" e "Gol da Alemanha" 
+
+c) Abaixo dos botões deve haver um texto em negrito dizendo "Tempo real do jogo:" 
+
+d) Sempre que o 1º botão for clicado, deve aparecer, a frase 
+
+    É goooolll do Brasil!!! 
+
+e) Sempre que o 2º botão for clicado, deve aparecer, a frase 
+
+    É goooolll da Alemanha!!! 
+
+f) Detalhe importante: As frase descritas em d) e e) devem ir de acumulando abaixo 
+do que já existia na página. Ou seja, a primeira vez que clicar em algum dos botões o 
+texto deve ficar abaixo do texto descrito em c). E depois cada vez abaixo do que já existia 
+e assim por diante. -->
+
+    <h2>Brasil x Alemanha</h2> <br>
+
+    <button onclick="golBrasil()" >Gol do Brasil</button> <br>
+    <button onclick="golAlemanha()" >Gol da Alemanha</button> <br>
+
+    <b>Tempo real do jogo:</b>
+
+    <span id="analisar"></span>
+
+</body>
+
+<script>
+    function golBrasil() {
+        analisar.innerHTML += "Gol do Brasil!";
+    }
+
+    function golAlemanha() {
+        analisar.innerHTML += "Gol da Alemanha!";
+    }
+
+</script>
+
+</html>
