@@ -12,21 +12,7 @@
     Entre com a segunda nota: <input id="ipt_n2"> <br>
     <button onclick="calcular()">Calcular Média</button>
     <div id="div_msg"></div>
+
+    <script src="./exer4.js" ></script>
 </body>
 </html>
-<script>
-    function calcular() {
-        // 1ª solução
-        // div_msg.innerHTML = `A sua média é:${(Number(ipt_n1.value) + Number(ipt_n2.value)) / 2}`;
-
-        // 2ª solução
-        // var ax_media = (Number(ipt_n1.value) + Number(ipt_n2.value)) / 2;
-        // div_msg.innerHTML = `A sua média é:${ax_media}`;
-
-        //3ª solução
-        var ax_n1 = Number(ipt_n1.value);
-        var ax_n2 = Number(ipt_n2.value);
-        var ax_media = (ax_n1 + ax_n2) / 2;
-        div_msg.innerHTML = `A sua média é:${ax_media.toFixed(2)}`;
-    }
-</script>
