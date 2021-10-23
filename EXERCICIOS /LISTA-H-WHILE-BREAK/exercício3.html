@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While-Exercicío2</title>
+</head>
+
+<body style="background-color: cornflowerblue;">
+
+    <center>
+        <h3>Escolha um numero</h3> <br>
+        <input type="text" id="ipt_numero"> <br>
+
+        <h3>Escolha outro numero</h3> <br>
+        <input type="text" id="ipt_numero2"> <br>
+
+
+
+
+        <button onclick="verificar()">Verificar</button> <br>
+        <span id="span_msg"></span> 
+    </center>
+
+</body>
+
+</html>
+
+
+
+<script>
+    function verificar() {
+
+
+        span_msg.innerHTML = '';
+        var numero1 = Number(ipt_numero.value);
+        var numero2 = Number (ipt_numero2.value);
+
+
+        while (numero1 <= numero2) {
+
+            if (numero1 % 2 == 0) {
+
+            span_msg.innerHTML += `${numero1} <br>`;
+            numero1++;
+
+                
+            }
+            else{
+            numero1++;    
+
+            }
+
+            
+
+
+
+        }
+
+
+    }
+
+
+
+</script>
