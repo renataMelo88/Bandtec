@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex21</title>
+</head>
+<body>
+    Time A: <b id="b_timea">0</b> X <b id="b_timeb">0</b> Time B 
+    <br><br><br>
+
+    <input id="ipt_timea" placeholder="Pontos do Time A">
+    <input id="ipt_timeb" placeholder="Pontos do Time B"> 
+    <br><br>
+
+    <button onclick="placar()">Contabilizar Pontos</button>
+    <button onclick="zerar()">Zerar o Placar</button>
+
+</body>
+</html>
+<script>
+    // Variáveis globais para guardar a quantidade de pontos 
+    // do time A e do time B
+    var ax_timea = 0;
+    var ax_timeb = 0;
+
+    function placar() {
+        // Soma nas variáveis globais a quantidade de pontos digitado na página
+        // OBS o comando abaixo é o mesmo que 
+        //       ax_timea = ax_timea + Number(ipt_timea.value);
+        ax_timea += Number(ipt_timea.value);
+        ax_timeb += Number(ipt_timeb.value);
+
+        //Mostra na página o placar contido nas variáveis globais
+        b_timea.innerHTML = ax_timea;
+        b_timeb.innerHTML = ax_timeb;
+
+        //Limpa os campos de entrada da página
+        ipt_timea.value = "";
+        ipt_timeb.value = "";
+        
+    }
+    function zerar() {
+        // Inicializa as variáveis globais
+        ax_timea = 0;
+        ax_timeb = 0;
+
+        // Zera o placar da página
+        b_timea.innerHTML = 0;
+        b_timeb.innerHTML = 0;
+    }
+</script>

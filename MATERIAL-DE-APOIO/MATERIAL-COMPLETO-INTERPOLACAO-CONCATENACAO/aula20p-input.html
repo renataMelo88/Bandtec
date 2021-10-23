@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua cidade natal?
+    <input placeholder="cidade natal" id="cidade" type="text"> <br>
+    Qual sua idade?
+    <input placeholder="ano de nasc" id="ano" type="text"> <br>
+
+    <button onclick="cadastrar()" >Cadasto</button> <br>
+    <button onclick="limpar()" >Limpar</button>
+
+    <div id="ver" ></div>
+</body>
+
+<script>
+    function cadastrar(){
+        ver.innerHTML = "Sua cidade é" + cidade.value + "e sua idade é" + cidade.value;
+    }
+
+    function limpar(){
+        ver.innerHTML =    ' ';
+    }
+</script>
+</html>

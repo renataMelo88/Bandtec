@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exec04</title>
+</head>
+<body>
+    <h3>Cálculo de Média</h3>
+    Entre com a primeira nota <input id="ipt_n1"> <br>
+    Entre com a segunda nota: <input id="ipt_n2"> <br>
+    <button onclick="calcular()">Calcular Média</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        // 1ª solução
+        // div_msg.innerHTML = `A sua média é:${(Number(ipt_n1.value) + Number(ipt_n2.value)) / 2}`;
+
+        // 2ª solução
+        // var ax_media = (Number(ipt_n1.value) + Number(ipt_n2.value)) / 2;
+        // div_msg.innerHTML = `A sua média é:${ax_media}`;
+
+        //3ª solução
+        var ax_n1 = Number(ipt_n1.value);
+        var ax_n2 = Number(ipt_n2.value);
+        var ax_media = (ax_n1 + ax_n2) / 2;
+        div_msg.innerHTML = `A sua média é:${ax_media.toFixed(2)}`;
+    }
+</script>

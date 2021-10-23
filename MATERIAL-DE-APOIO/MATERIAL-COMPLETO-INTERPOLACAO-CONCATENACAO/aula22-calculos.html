@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula22 - calculos</title>
+</head>
+
+<body>
+    <!--
+        * multiplicação
+        / divisão
+        ** exponenciação 
+        - subtração
+        + soma
+
+        1/2 quadrada
+        1/3 cubica
+
+        (ADIÇÃO SEMPRE USAR NUMBER)
+
+    -->
+
+    <h4>Minha calculadora</h4>
+
+    Entre com primeiro numero: <br>
+    <input type="text" id="primeiroNumero"> <br>
+    Entre com segundo numero: <br>
+    <input type="text" id="segundoNumero"> <br>
+
+
+    <button onclick="multiplica()">Multiplicação</button>
+    <button onclick="dividi()">Divisão</button>
+    <button onclick="somar()" >Somar</button>
+    <button onclick="sub()" >Subtração</button>
+    <button onclick="expo()" >Exponenciação</button>
+    <button onclick="radi()" >Radiação</button>
+
+    <div id="verificar" ></div>
+
+</body>
+
+<script>
+    function multiplica(){
+        verificar.innerHTML += `O <br> resultado da multiplicação é  ${primeiroNumero.value * segundoNumero.value} <br>`;
+
+    }
+
+    function dividi(){
+        verificar.innerHTML += ` <br> o resultado da sua divisão é ${primeiroNumero.value / segundoNumero.value} <br>`;
+        
+    }
+
+    function somar(){
+        verificar.innerHTML += ` <br> o resultado da soma é ${Number(primeiroNumero.value) + Number(segundoNumero.value)}  <br>` ;
+        
+    }
+
+    function sub(){
+        verificar.innerHTML += ` <br> o resultado da sua divisão é ${primeiroNumero.value - segundoNumero.value}  <br>`;
+
+    }
+
+
+</script>
+
+</html>
