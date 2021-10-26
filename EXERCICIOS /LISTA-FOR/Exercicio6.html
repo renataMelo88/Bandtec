@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio6</title>
+</head>
+<body style="background-color: #4682B4; color: black;">
+    <center>
+<!--
+    6.       Crie um programa o qual:
+
+a) Pergunte ao usuário um número
+
+b) Pergunte ao usuário uma frase
+
+c) Ao clicar num botão "Papagaio", a frase é exibida N 
+vezes em N alerts, onde N é o número informado em a)
+-->
+
+<h3>Digite uma numero</h3> <br>
+<input type="text"  id="ipt_numero"> <br>
+
+<h3>Digite uma frase</h3> <br>
+<input type="text"  id="ipt_frase"> <br>
+
+<button onclick="analisar()">Papagaio</button>
+
+<div id="msg"></div>
+
+
+    </center>
+</body>
+</html>
+
+<script>
+    function analisar() {
+
+        var frase = ipt_frase.value;
+        var numero = Number(ipt_numero.value);
+
+        for (var index =0 ; index < numero; index++) {
+            msg.innerHTML += `${frase} <br>`;
+            
+        }
+        
+    }
+</script>
+

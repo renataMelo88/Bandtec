@@ -14,24 +14,9 @@
     <h3>Escolha um numero</h3>
     <input onchange="analisar()" id="ipt_numero" type="text"> <br>
     <span id="span_msg"></span>
+
+     <script src="./exercicio2.js" ></script>
 </body>
 
 </html>
 
-<script>
-
-
-    function analisar() {
-        var contador = 5;
-        var numero = Number(ipt_numero.value);
-        span_msg.innerHTML = '';
-
-        while (contador <= numero) {
-            span_msg.innerHTML += `${contador} <br>`;
-            contador++;
-
-        }
-
-    }
-
-</script>

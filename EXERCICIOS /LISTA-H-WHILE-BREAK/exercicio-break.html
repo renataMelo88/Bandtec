@@ -11,36 +11,10 @@
     <input id="ipt_numero" type="text"> <br>
 
     <button onclick="testar()" >Testar minha sorte</button>  <br>
-    <div id="div_msg." ></div>
+    <div id="msg" ></div>
+
+    <script src="./break.js"></script>
 
 </body>
 </html>
 
-<script>
-
-    function testar() {  
-     div_msg.innerHTML = '';
-        var quantidade = 0;
-        var ax_sorteado = 0;
-        var numero = Number(ipt_numero.value);
-
-        while (quantidade < 20) {
-            ax_sorteado = (Math.random() * 100).toFixed(0);
-            div_msg.innerHTML += `Muito bem você é uma pessoa de sorte <br>`;
-
-
-
-            if (ax_sorteado % 6 == 0) {
-                break;
-
-
-            }
-            quantidade++;
-
-        }
-
-
-
-    }
-
-</script>

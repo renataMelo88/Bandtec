@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        5.       Crie um programa o qual:
+
+a) Tenha um botão "Conte de 99 a 1"
+
+b) Ao clicar nele, mostre na tela, um abaixo do outro, os números de 99 a 1
+
+ 
+        
+
+    -->
+
+    <h3>Entre com o limite inferior</h3> <br>
+    <input type="text"  id="ipt_inf"> <br>
+
+    <h3>Entre com o limite superior</h3> <br>
+    <input type="text"  id="ipt_sup"> <br>
+
+    <button onclick="analisar()" >Conte de 99 a 1</button> <br>
+    <div id="msg"></div>
+</body>
+</html>
+
+<script>
+ function analisar() {
+
+    var superior = Number(ipt_sup.value);
+    var inferior = Number(ipt_inf.value);
+
+    for (var index = 99; index >= 0; index--) {
+       
+       
+           msg.innerHTML+= `${index}<br>`;
+           
+       
+   }
+
+           
+}
+</script>
+
+

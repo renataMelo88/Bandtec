@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio16</title>
+</head>
+
+<body style="background-color: #FF7F50;">
+
+    <center>
+        <!--
+            14.   Crie um programa no qual:
+
+a) O usuário informa quantos depósitos ele fez no banco
+
+b) O usuário informa o valor de cada depósito, pois ele sempre depositava exatamente o mesmo valor
+
+c) Ao clicar em "Acompanhar grana", deve aparecer o valor, mês a mês, como neste exemplo
+
+    1º Mês: R$ 500.00
+
+    2º Mês: R$ 1000.00
+    3º Mês: R$ 1500.00
+    4º Mês: R$ 2000.00
+    5º Mês: R$ 2500.00
+    Total guardado: R$2500.00
+
+No exemplo acima, o usuário informou 5 depósitos e 500 por depósito.
+        -->
+        <h3>Quantos depósitos ele fez no banco</h3> <br>
+        <input type="text" id="ipt_depositos"> <br>
+
+        <h3>Qual valor</h3> <br>
+        <input type="text" id="ipt_valor"> <br>
+
+
+        <button onclick="analisar()">Acompanhar grana</button>
+
+        <div id="msg"></div>
+
+
+
+
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    
+    function analisar() {
+
+        var deposito = Number(ipt_depositos.value);
+        var valor =  Number(ipt_valor.value);
+        var valor2 = valor * 0.1;
+
+
+
+
+        for (var index = 1; index <= deposito; index++) {
+
+            
+
+            if (deposito > 3 && deposito < 24 && valor >= 1000) {
+                if (index % 3 == 0) {
+                    valor += (valor*0.01)
+                    msg.innerHTML += `O usuário informou ${index} º<br> ${valor} 
+                    <div><img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Estrela-PNG-1024x1024.png" style="width: 40px;" alt=""></div> <br>`;
+                    valor +=  Number(ipt_valor.value);
+
+            } else {
+                
+            msg.innerHTML += `O usuário informou ${index}º <br> ${valor} mês <br>`;
+           valor+= Number(ipt_valor.value);
+
+            }
+            
+            } else {
+                alert('Erro! A quantidade de depositos deve ser entre 3 e 24! e o valor maior que 1000');
+            }
+
+           msg.innerHTML += `O valor total é de: R$ ${valor}`;
+
+
+
+        }
+
+    }
+</script>

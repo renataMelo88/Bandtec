@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #4876FF; color: black;">
+    <center>
+        <!--
+            21. Crie um programa em HTML/JS o qual:
+
+a) Pergunte ao usuário quantos números ele quer sortear
+
+b) Ao clicar em "Sortear números", sorteie N números inteiros entre 0 e 100 - 
+conforme o número indicado em a) - e exiba eles na tela, um embaixo do outro
+
+c) ao final mostre:
+
+            O maior número sorteado foi: 999
+
+            O menor número sorteado foi: 999
+
+            A média de todos os números sorteados é: 99,99
+
+
+        -->
+
+        <h3>Quantos números voce quer sortear?</h3> <br>
+        <input type="text"  id="ipt_num">
+        <button onclick="sortear()">Sortear números</button> <br>
+        <div id="mensagem"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var inicial = 0;
+    var numero = 0;
+    var maiorNumero = 100;
+    var menorNumero = 0;
+
+    function sortear(){
+
+        numero = Number(ipt_num.value);
+
+        
+        var media = Number (maiorNumero + menorNumero/2 )*100;
+
+ 
+
+        while (inicial < numero) {
+            numero = Number((Math.random() * 99 +1).toFixed(0));
+
+       if( numero >= maiorNumero  && numero <= menorNumero){
+           mensagem.innerHTML += `O maior número sorteado foi: ${maiorNumero} <br> 
+           O menor número sorteado foi: ${menorNumero} <br>
+           A média de todos os números sorteados é: ${media}
+
+           `;
+           inicial++;
+          
+       }
+
+
+    }
+
+}
+</script>

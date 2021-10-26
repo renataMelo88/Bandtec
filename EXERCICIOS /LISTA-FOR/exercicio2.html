@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício2</title>
+</head>
+<body>
+    <!--
+        2.       Crie um programa o qual:
+
+a) Tenha um botão "Diga algo sobre a quarentena"
+
+b) Ao clicar nele, mostre na própria página 7 vezes uma mesma frase a sua escolha
+
+ 
+    -->
+
+<center>
+
+    <h3>Quarentena</h3> <br>
+
+    <button onclick="verificar()">Diga algo sobre a quarentena</button> <br>
+    <div id="msg"></div>
+
+</center>
+</body>
+</html>
+
+
+<script>
+    function verificar(){
+
+        for (var index = 1; index <= 7; index++) {
+            msg.innerHTML +=`${index} Mantenha o distanciamento!<br>`;
+            
+        }
+        
+    }
+</script>
